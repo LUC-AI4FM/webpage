@@ -43,15 +43,6 @@ jobs:
           python3 -m pip install uv && \
           python3 -m uv sync
 
-      - name: Cache restore
-        id: cache-restore
-        uses: actions/cache/restore@v4
-        with:
-          path: ./.venv
-          key: uv-${{ github.run_id }}
-          restore-keys:
-            uv-
-
       - name: Get Zotero Bibliography
         run: |
           ./tools/get-zotero-bibtex.sh
@@ -84,3 +75,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+# In case we need this later.... was at line 46
+#      - name: Cache restore
+#        id: cache-restore
+#        uses: actions/cache/restore@v4
+#        with:
+#          path: ./.venv
+#          key: uv-${{ github.run_id }}
+#          restore-keys:
+#            uv-
