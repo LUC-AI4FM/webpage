@@ -1,9 +1,9 @@
-Information for Prospective Students
-===================================
+Information for Prospective Research Students
+==============================================
 
-I receive many inquiries from students who are interested in joining my research group and/or seeking MS or PhD admission.
+I receive many inquiries from students within and outside of Loyola University Chicago who are interested in joining my research group and/or seeking MS or PhD admission.
 To help set expectations and reduce confusion, this page explains how admissions and funding work at Loyola University Chicago
-and what I look for in prospective members of the Software and Systems Laboratory (SSL), *which I direct*.
+and what I seek in prospective members of the Software and Systems Laboratory (SSL), *which I direct*.
 
 Please Read Before Contacting Me by E-mail
 ---------------------------------------------
@@ -50,6 +50,43 @@ Prospective students should be prepared to explain how their interests connect t
 .. note::
 
    For general questions about the PhD application process, please contact `phd-admissions@cs.luc.edu <mailto:phd-admissions@luc.edu>`_.
+
+
+Course-Based Research Experiences (CUREs) for Undergraduates and Master’s Students
+------------------------------------------------------------------------------------
+
+.. note:: This is a new requirement for all undergraduate (BS) and graduate master's (MS, not PhD) students, effective January 2026.
+
+All undergraduate students wishing to conduct research with me will be expected to enroll in my **course-based undergraduate research experience (CURE)** rather than pursuing ad hoc or informal research arrangements.
+Loyola’s CURE program is designed to provide students with a structured, mentored research experience embedded within a credit-bearing course, emphasizing authentic inquiry, collaboration, and scholarly practice.
+Additional information about the CURE initiative is available through the College of Arts and Sciences at: https://www.luc.edu/cas/academics/cures/.
+
+A central purpose of the CURE model is to provide **structure, accountability, and shared expectations** for student research.
+In the Software and Systems Laboratory, this structure is realized through a set of **common research milestones** that all students are expected to meet.
+These milestones typically include the development of a research proposal, a mid-semester progress review, the creation of a research artifact (such as software, data, or experimental results), and a final written report (e.g., ArXiv, conference, or journal paper draft) and presentation.
+Students are expected to spend **substantial and regular time engaged in lab-based research**, rather than treating research as fully asynchronous or independent work.
+This amount of time should be no less than 10 hours/week, inclusive of our regular lab meetings.
+
+Each research project (or project idea) operates as a **small research team**, often aligned with or extending active doctoral research in the lab.
+**Mandatory weekly meetings** are held for each research team to review progress, discuss technical and research challenges, and plan subsequent work.
+Students should expect to interact regularly with me and with doctoral students in the lab as part of this collaborative research process.
+
+This research experience is offered as **COMP 388-005** in Spring 2026, with me serving as the primary instructor.
+You are eligible to take this course, even if you have taken independent study previously with me or other professors.
+A **COMP 488** section will also be available for master’s students who wish to engage in research.
+These courses are **not intended for doctoral students**, who are expected to be largely self-directed at this stage of their training.
+Projects in COMP 388 and COMP 488 are closely integrated with ongoing doctoral research in the Software and Systems Laboratory.
+
+All students enrolled in the CURE sections will be expected to produce a **final written report of arXiv quality**, prepared using **LaTeX** and following the conventions of professional computer science research papers.
+This includes clear problem formulation, appropriate background and related work, a description of methods or systems, results or evaluation where applicable, and thoughtful discussion.
+While submission to arXiv or a conference is not guaranteed, the expectation is that the work is written at a level that would make such dissemination plausible.
+
+Enrollment in these sections is **by permission only**.
+I will also be combining these offerings with my **COMP 398 Independent Study** section, which allows students to earn **Engaged Learning credit** when required for graduation.
+However, I will no longer supervise independent studies that are not directly connected to ongoing research in the Software and Systems Laboratory.
+Students seeking independent or exploratory project work unrelated to active SSL research are encouraged to reach out to other faculty members.
+As department chair, my research supervision capacity is limited, and I need to focus my time on students contributing to active, lab-aligned research efforts.
+
 
 Expectations for Prospective and Current SSL Members
 ------------------------------------------------------
