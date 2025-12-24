@@ -4,17 +4,15 @@
 :tags: Artificial Intelligence, 11-29-2025
 :nocomments:
 
-==============================================================
+======================================================================
 Advancing HPC Education with an Agentic Tutoring System (EduHPC 2025)
-==============================================================
+======================================================================
 
 This post highlights a recent **EduHPC 2025** paper `doi:10.1145/3731599.3767386 <https://dl.acm.org/doi/10.1145/3731599.3767386>`__ led by my PhD student **Erik Pautsch** and co-supervised by me and  **Silvio Rizzi** at Argonne National Laboratory.  
 
 In this work, we introduce an **agentic tutoring system** that supports instructors in planning, teaching, and assessing high-performance computing (HPC) content.  
 Our goal is to make HPC instruction more accessible, scalable, and sustainable as it is presently lacking in all three dimensions.
 We think AI can help.
-
-.. todo:: Add code repository.
 
 Abstract / Summary
 ------------------
