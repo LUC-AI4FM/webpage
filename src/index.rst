@@ -20,17 +20,8 @@ For more information about me and my work/interests, see :doc:`pages/about`.
          :color: primary
          :expand:
 
-         View Blogs
+         View Posts
 
-   .. grid-item-card:: 📖 Papers
-      :text-align: center
-
-      .. button-link:: papers/index.html
-         :click-parent:
-         :color: primary
-         :expand:
-
-         View Papers
 
    .. grid-item-card:: 📃 CV
       :margin: 3 0 0 0
@@ -75,4 +66,3 @@ For more information about me and my work/interests, see :doc:`pages/about`.
 
    All Blog Posts <posts/index>
    posts/*
-
