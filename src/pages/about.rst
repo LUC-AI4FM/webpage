@@ -35,7 +35,7 @@ He is the former Editor-in-Chief of *IEEE Computing in Science and Engineering* 
 He has authored/co-authored over 200 works including journal articles, conference papers, book chapters, and technical reports.
 His books have been published by MIT Press, Prentice Hall, and Taylor and Francis (CRC Press).
 
-TL;DR Bio and Comentary
+TL;DR Bio and Commentary
 -----------------------------------------
 
 I am a full professor of computer science and chairperson of the same at Loyola University Chicago, as well as a visiting computer scientist at Argonne National Laboratory in the Leadership Computing Facility.
