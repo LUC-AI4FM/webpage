@@ -2,13 +2,18 @@ Information for Prospective Research Students
 ==============================================
 
 I receive many inquiries from students within and outside of Loyola University Chicago who are interested in joining my research group and/or seeking MS or PhD admission.
+
 To help set expectations and reduce confusion, this page explains how admissions and funding work at Loyola University Chicago
 and what I seek in prospective members of the Software and Systems Laboratory (SSL), *which I direct*.
 
-Please Read Before Contacting Me by E-mail
----------------------------------------------
+Even though this page is primarily intended for prospective PhD students, many of the same principles apply to current master's and undergraduate students.
 
-If you are interested in working with the Software and Systems Laboratory, please follow these guidelines before requesting a meeting.
+Please read this page carefully before contacting me by e-mail with questions about joining the lab.
+
+Students Not Yet Applied to Loyola Must Follow These Steps
+-----------------------------------------------------------
+
+If you are interested in working with the Software and Systems Laboratory, please follow these guidelines prior to e-mailing me or requesting a meeting:
 
 1. **Submit a complete application** to Loyola University Chicago at
    https://gpem.luc.edu/.
@@ -38,22 +43,22 @@ Faculty members, including department chairs, cannot personally admit students o
 For the PhD program, a departmental committee reviews all applications and makes admissions decisions.
 We have a limited number of departmental teaching assistantships each year.
 Research assistantships depend on whether individual faculty members have active grant funding.
+Even when when a faculty member has funding, they may not have sufficient resources to support an admitted student for their full studies.
 
-Students who hold external national or international fellowships are especially encouraged to apply.
+Students who hold national or international fellowships are especially encouraged to apply.
 Applicants with fellowships that provide at least three years of support are typically the most competitive.
 
-Admission to the MS or PhD program does **not** guarantee placement in my lab.
+Admission to the MS or PhD program does not guarantee placement in my lab.
 Lab membership depends on research alignment, preparation, and available funding.
 Prospective students should be prepared to explain how their interests connect to ongoing work in the group.
-**Generic or mass-mailed inquiries cannot--and will not--be considered.**
 
-.. note::
+.. warning::
+  Generic or mass-mailed inquiries cannot---and will not---be considered.
+  Lengthy e-mails that do not demonstrate familiarity with our research and a clear rationale for joining SSL are likely to be ignored.
+  We are a savvy AI research group; we can tell when you are using AI tools to draft your messages and will ignore such messages.
 
-   For general questions about the PhD application process, please contact `phd-admissions@cs.luc.edu <mailto:phd-admissions@luc.edu>`_.
-
-
-Course-Based Research Experiences (CUREs) for Undergraduates and Master’s Students
-------------------------------------------------------------------------------------
+Course-Based Research Experiences (CUREs) for Current Undergraduates and Master’s Students
+--------------------------------------------------------------------------------------------
 
 .. note:: This is a new requirement for all undergraduate (BS) and graduate master's (MS, not PhD) students, effective January 2026.
 
@@ -88,8 +93,8 @@ Students seeking independent or exploratory project work unrelated to active SSL
 As department chair, my research supervision capacity is limited, and I need to focus my time on students contributing to active, lab-aligned research efforts.
 
 
-Expectations for Prospective and Current SSL Members
-------------------------------------------------------
+Expectations for Prospective and Current SSL Members Alike
+-----------------------------------------------------------
 
 As director of the Software and Systems Laboratory, I oversee a research group focused on systems,
 high-performance computing, software engineering, AI-assisted scientific computing, and interdisciplinary work
@@ -113,8 +118,8 @@ complex, open-ended problems are crucial. Students should be able to give and re
 Communication skills matter. SSL is not a code-only research group; students are expected to write papers,
 prepare presentations, and contribute to discussions about research methods and evaluation.
 
-Conduct Expectations for All SSL Members
-----------------------------------------
+Conduct Expectations
+--------------------
 
 Professional conduct, reliability, and respect for others are essential to success.
 We maintain a collaborative, inclusive environment and expect all members to uphold recognized community standards.
@@ -128,7 +133,7 @@ These documents articulate widely accepted expectations for respectful behavior,
 equity and inclusion, and responsible conduct in computing.
 We expect all SSL members to engage with colleagues in ways consistent with these principles.
 
-How We Work as a Team
+Collaboration Model
 ---------------------
 
 SSL is a highly collaborative research group. Students typically begin by joining an existing project,
@@ -139,8 +144,7 @@ Purely solo projects are rare in our group; however, many solo projects often or
 Students should expect to work closely with peers, faculty,
 and sometimes collaborators at Argonne National Laboratory and other universities (e.g. Purdue University, Northern Illinois University, Northwestern University, and Arizona State University, among others).
 
-As a **world-focused** laboratory, we *greatly* value diversity, equity, and inclusion, and we welcome students from **all backgrounds** who are committed
-to a respectful and collaborative research environment.
+As a **world-focused** laboratory, we greatly value diversity, equity, and inclusion, and we welcome students from **all backgrounds** who are committed to a respectful and collaborative research environment.
 
 Please see my presentation on `Inclusive Mentoring <https://doi.org/10.6084/m9.figshare.30501749.v1>`__ to understand my mentoring approach.
 
@@ -206,8 +210,8 @@ Students who have completed most of the courses listed above—or who can demons
 experience through industry work, open-source contributions, or independent projects—are typically
 well prepared to engage with SSL's research projects and collaborate effectively within the group.
 
-Preparing a Strong Case or Inquiry to Join
--------------------------------------------
+Preparing a Strong Case Join the Software and Systems Laboratory
+----------------------------------------------------------------------------
 
 Students who wish to express interest in working with the lab should begin by reading several of our recent publications
 and briefly describing how their background aligns with specific projects.

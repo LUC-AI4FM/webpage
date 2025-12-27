@@ -76,12 +76,3 @@ For more information about me and my work/interests, see :doc:`pages/about`.
    All Blog Posts <posts/index>
    posts/*
 
-.. toctree::
-   :glob:
-   :hidden:
-   :maxdepth: 2
-   :caption: Papers
-
-   All Papers <papers/index>
-   papers/*
-
