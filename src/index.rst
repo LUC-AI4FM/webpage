@@ -13,6 +13,7 @@ For more information about me and my work/interests, see :doc:`pages/about`.
 .. grid:: 2
 
    .. grid-item-card:: 🖊️ Blog Posts
+      :margin: 3 0 0 0
       :text-align: center
 
       .. button-link:: posts/index.html
