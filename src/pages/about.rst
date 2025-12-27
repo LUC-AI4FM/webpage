@@ -5,20 +5,37 @@ Welcome
 -------
 
 Hi! I’m *George K. Thiruvathukal*.
+
 You can just call me *George*, as most people cannot pronounce *Thiruvathukal* on the first try.
 If you practice the English words *theoretical* and *topological*, you can learn my name easily.
+For whatever reason, many of my Spanish-speaking friends can pronounce it properly.
+Perhaps it is related to the sounding of the vowels!
 
 If you prefer to be formal, you may call me *Professor* or *Doctor*, though titles are not particularly important to me.
 Just saying *George* will suffice.
 
-A few lighthearted guidelines:
+A few lighthearted suggestions regarding my name:
 
-- If you use *Doctor*, please understand that I do not write prescriptions.
+- If you use *Doctor*, please understand that I do not write prescriptions, except on post-it notes. (Yes, I still use them!)
 - If you use *Mister*, especially *Mister T.*, please know there is only one legit `Mr. T <https://en.wikipedia.org/wiki/Mr._T>`__.
-  And when I last checked, I do not have his hairstyle. But it's close!
-- If you want an additional challenge, you might look to the capital city of Kerala—`Thiruvananthapuram <https://en.wikipedia.org/wiki/Thiruvananthapuram>`__—where my father was born.
+  And when I last checked, I do not have his hairstyle. At one point, it might have been close.
+- If you want an additional pronunciation challenge, you might look to the capital city of Kerala—`Thiruvananthapuram <https://en.wikipedia.org/wiki/Thiruvananthapuram>`__—in the state of India where my father was born.
 
-Ok, and now for the more *serious* bio...
+
+Concise Bio
+-----------
+
+*George K. Thiruvathukal* is a full professor and chairperson of the Department of Computer Science at Loyola University Chicago.
+He is also a visiting computer scientist at Argonne National Laboratory in the Leadership Computing Facility.
+His research spans high-performance computing, distributed systems, software engineering, programming languages, machine learning, and computer vision.
+His interdisciplinary interests include digital humanities and music, history of computing, computer ethics, and computing in society.
+Thiruvathukal received his BS degrees in computer science and physics from Lewis University (with a Mathematics Minor, almost a major) and a PhD in computer science from the Illinois Institute of Technology.
+Apart from his academic roles, he held positions in industry as a software engineer/developer from 1990-1996 at Tellabs and R.R. Donnelley & Sons (Technical Center and Metromail) and was President and CEO of Nimkathana Corporation, funded by the Department of Defense/DARPA Small Business Innovation Research (SBIR) program.
+He is the former Editor-in-Chief of *IEEE Computing in Science and Engineering* and Associate Editor-in-Chief of *IEEE Computer* magazine.
+He has authored/co-authored over 200 works including journal articles, conference papers, book chapters, and technical reports.
+His books have been published by MIT Press, Prentice Hall, and Taylor and Francis (CRC Press).
+
+TL;DR Bio and Comentary
 -----------------------------------------
 
 I am a full professor of computer science and chairperson of the same at Loyola University Chicago, as well as a visiting computer scientist at Argonne National Laboratory in the Leadership Computing Facility.
@@ -50,11 +67,3 @@ Beyond the roles of department chair and professor, I returned to school in Janu
 I have also been fortunate to learn from other *brilliant* mentors, including `Jack Cassidy <https://www.jackcassidymusic.com/>`__, `Victor Garcia <https://victorgarciamusic.com/>`__, `Chris Madsen <https://www.luc.edu/dfpa/facultyandstaffdirectory/profiles/christophermadsendma.shtml>`__, and `Michael Nearpass <https://www.oldtownschool.org/teachers/Michael-Nearpass/>`__.
 I’m not sure my chairperson life will allow me to complete a degree in music and jazz performance, but I am profoundly grateful to this group of musicians for bringing out the best in me and helping me grow as an improviser and composer. Wish me luck.
 
-Concise Bio
------------
-
-George K. Thiruvathukal is a full professor and chair of the Department of Computer Science at Loyola University Chicago.
-He is also a visiting computer scientist at Argonne National Laboratory in the Leadership Computing Facility.
-His research spans high-performance computing, distributed systems, software engineering, machine learning, and computer vision.
-His interdisciplinary interests include digital humanities and music, the history of computing, computer ethics, and computing in society.
-Thiruvathukal received his bachelor’s degrees in computer science and physics from Lewis University and a PhD in computer science from the Illinois Institute of Technology.
