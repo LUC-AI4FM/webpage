@@ -30,5 +30,19 @@ Key take-aways
 Citation
 --------
 
-George F. Hurlburt, George K. Thiruvathukal, Nir Kshetri, and Norita Ahmad, “Low Code/No Code Meets the Metaverse,” *Computer*, vol. 58, no. 3, pp. 22–28, 2025, doi: https://doi.org/10.1109/MC.2024.3520883
+George F. Hurlburt, George K. Thiruvathukal, Nir Kshetri, and Norita Ahmad, *Low Code/No Code Meets the Metaverse*, Computer, volume 58, number 3, pages 22–28, 2025, doi: https://doi.org/10.1109/MC.2024.3520883
 
+.. code-block:: bibtex
+
+   @ARTICLE{10896908,
+     author={Hurlburt, George F. and Thiruvathukal, George K. and Kshetri, Nir and Ahmad, Norita},
+     journal={Computer},
+     title={Low Code/No Code Meets the Metaverse},
+     year={2025},
+     volume={58},
+     number={3},
+     pages={22-28},
+     keywords={},
+     doi={10.1109/MC.2024.3520883}
+   }
+   
