@@ -97,7 +97,7 @@ Access
 Citation
 ----------------------
 
-Below is the BibTeX entry for the EduHPC 2025 paper, included directly in the post:
+Erik Pautsch, Mengjiao Han, Joseph A. Insley, Janet Knowles, Victor A. Mateevitsi, Silvio Rizzi, and George K. Thiruvathukal. 2025. *An Interactive Agentic HPC Tutor for Lesson Planning, Teaching, and Assessment*. In Proceedings of the SC '25 Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis (SC Workshops '25). Association for Computing Machinery, New York, NY, USA, 367–375. https://doi.org/10.1145/3731599.3767386
 
 .. code-block:: bibtex
 
