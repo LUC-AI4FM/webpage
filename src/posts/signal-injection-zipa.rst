@@ -75,8 +75,18 @@ Designers of large-scale IoT auto-provisioning systems should adopt more robust 
 Bibliography
 --------------
 
+Isaac Ahlgren, Rushikeshh Shirsat, Omar Achkar, George K. Thiruvathukal, Kyu In Lee and Neil Klingensmith, *Not-so-Secret Authentication: The SyncBleed Attacks and Defenses for Zero-Involvement Authentication Systems*, 2025 IEEE International Conference on Cyber Security and Resilience (CSR), Chania, Crete, Greece, 2025, pp. 592-599, https://doi.org/10.1109/CSR64739.2025.11130070.
 
-.. bibliography::
-   :filter: false
+.. code-block:: bibtex
 
-   ahlgren_not-so-secret_2025
+   @INPROCEEDINGS{11130070,
+     author={Ahlgren, Isaac and Shirsat, Rushikesh and Achkar, Omar and Thiruvathukal, George K and Lee, Kyu In and Klingensmith, Neil},
+     booktitle={2025 IEEE International Conference on Cyber Security and Resilience (CSR)}, 
+     title={Not-so-Secret Authentication: The SyncBleed Attacks and Defenses for Zero-Involvement Authentication Systems}, 
+     year={2025},
+     volume={},
+     number={},
+     pages={592-599},
+     keywords={Resistance;Wireless communication;Privacy;Authentication;Vectors;Synchronization;Security;Standards;Resilience;Principal component analysis},
+     doi={10.1109/CSR64739.2025.11130070}}
+   
