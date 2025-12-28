@@ -38,5 +38,4 @@ Key benefits
 Citation
 --------
 
-George K. Thiruvathukal, *TLA for All: Model Checking in a Python Notebook*, 2024–2025 project notes and public tutorial materials.
-
+Konstantin Läufer and George K. Thiruvathukal, *TLA for All: Model Checking in a Python Notebook*, http://dx.doi.org/10.6084/m9.figshare.28376276.v1
