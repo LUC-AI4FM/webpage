@@ -72,7 +72,7 @@ This work presents the first demonstrated signal-injection attack on ZIPA-based 
 We show that relying purely on ambient signals for secure pairing is not sufficient in adversarial environments, even at moderate sound levels such as 95 dBA.
 Designers of large-scale IoT auto-provisioning systems should adopt more robust threat models, incorporate active defenses, and treat ZIPA schemes with caution when security is a primary concern.
 
-Bibliography
+Citaiton
 --------------
 
 Isaac Ahlgren, Rushikeshh Shirsat, Omar Achkar, George K. Thiruvathukal, Kyu In Lee and Neil Klingensmith, *Not-so-Secret Authentication: The SyncBleed Attacks and Defenses for Zero-Involvement Authentication Systems*, 2025 IEEE International Conference on Cyber Security and Resilience (CSR), Chania, Crete, Greece, 2025, pp. 592-599, https://doi.org/10.1109/CSR64739.2025.11130070.
