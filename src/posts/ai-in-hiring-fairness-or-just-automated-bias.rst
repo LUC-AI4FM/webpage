@@ -48,7 +48,7 @@ AI can assist in hiring, but it must never replace critical human judgment—esp
 Citation
 --------
 
-T. Fister and G. K. Thiruvathukal, "Artificial Intelligence Employment Interviews: Examining Limitations, Biases, and Perceptions," in Computer, vol. 57, no. 10, pp. 76-81, Oct. 2024, doi: 10.1109/MC.2024.3404669.
+Theresa Fister and George K. Thiruvathukal, "Artificial Intelligence Employment Interviews: Examining Limitations, Biases, and Perceptions," in Computer, volume 57, number 10, pages 76-81, October 2024, https://doi.org/10.1109/MC.2024.3404669.
 
 .. code-block:: bibtex
 
