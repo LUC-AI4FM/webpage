@@ -48,5 +48,17 @@ AI can assist in hiring, but it must never replace critical human judgment—esp
 Citation
 --------
 
-George K. Thiruvathukal, *AI in Hiring: Fairness or Just Automated Bias?*, 2024 commentary and discussion.
+T. Fister and G. K. Thiruvathukal, "Artificial Intelligence Employment Interviews: Examining Limitations, Biases, and Perceptions," in Computer, vol. 57, no. 10, pp. 76-81, Oct. 2024, doi: 10.1109/MC.2024.3404669.
 
+.. code-block:: bibtex
+
+   @article{10687332,
+     author={Fister, Theresa and Thiruvathukal, George K.},
+     journal={Computer}, 
+     title={Artificial Intelligence Employment Interviews: Examining Limitations, Biases, and Perceptions}, 
+     year={2024},
+     volume={57},
+     number={10},
+     pages={76-81},
+     keywords={Artificial intelligence;Employment;Training;Quality assessment;Software quality;Business},
+     doi={10.1109/MC.2024.3404669}}
