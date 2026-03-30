@@ -1,7 +1,10 @@
 ############
-Pages
+ Pages
 ############
 
-.. warning::
+.. toctree::
+   :maxdepth: 1
 
-   Nothing to see here yet.
+   About <about>
+   Team <people>
+   Get Involved <prospective-students>

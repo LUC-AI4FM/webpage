@@ -1,44 +1,162 @@
-###################################
- George K. Thiruvathukal, PhD
-###################################
+#############################################
+ Formal Methods in the Field
+#############################################
 
-**Welcome to the web site of George K. Thiruvathukal, PhD.**
+Welcome to **FMitF** - the Formal Methods in the Field research group at
+`Loyola University Chicago <https://luc.edu>`__, part of the
+`Department of Computer Science <https://luc.edu/cs>`__.
+We advance formal methods, rigorous system design, and reproducible tools at the
+intersection of logic, mathematics, AI, and real-world computing.
 
-I am `Professor and Chairperson <https://www.luc.edu/cs/aboutus/people/profiles/thiruvathukalgeorgek.shtml>`__ in the
-`Computer Science department <https://luc.edu/cs>`__ at `Loyola University Chicago <https://luc.edu>`__.
-I also hold a `Visiting Computer Scientist <https://www.alcf.anl.gov/about/people/george-k-thiruvathukal>`__ appointment at `Argonne National Laboratory <https://www.anl.gov>`__.
+Featured Research
+-----------------
 
-For more information about me and my work/interests, see :doc:`pages/about`.
+.. grid:: 1
+   :gutter: 2
+
+   .. grid-item-card::
+      :margin: 0
+
+      :octicon:`beaker;1em;sd-text-primary` **Can LLMs Write Correct TLA+ Specifications?**
+
+      *Evaluating Natural-Language-to-TLA+ Generation* - Under Submission
+
+      The first systematic evaluation of LLM-based TLA+ specification synthesis from
+      natural language. We evaluate 30 LLMs across eight families on a curated dataset of
+      205 TLA+ specifications, validated by both the SANY parser and TLC model checker.
+      LLMs achieve up to 26.6% syntactic correctness but only 8.6% semantic correctness.
+      Results show model size does not predict quality and code-specialized models
+      consistently underperform on formal languages.
+
+      .. button-link:: papers/llm-tla-evaluation.html
+         :color: primary
+
+         Read More
+
+      .. button-link:: posts/llm-tla-evaluation-2025.html
+         :color: secondary
+
+         Research Update
+
+
+Research Areas
+--------------
 
 .. grid:: 2
+   :gutter: 2
 
-   .. grid-item-card:: 🖊️ Blog Posts
+   .. grid-item-card::
+      :margin: 0
+
+      :octicon:`beaker;1em;sd-text-primary` **Formal Specification and Verification**
+
+      Building datasets, tooling, and infrastructure around **TLA+** and other formal
+      specification languages. Making model checking accessible through open pipelines
+      and notebook-based workflows.
+
+   .. grid-item-card::
+      :margin: 0
+
+      :octicon:`cpu;1em;sd-text-primary` **LLMs for Formal Methods**
+
+      Evaluating whether large language models can generate semantically correct formal
+      specifications. Identifying where LLMs fail on rigorous specification tasks and why.
+
+   .. grid-item-card::
+      :margin: 0
+
+      :octicon:`graph;1em;sd-text-primary` **Empirical Software Engineering**
+
+      Studying software artifacts at scale: pre-trained model naming conventions,
+      supply chain security, and development practices in real-world open-source systems.
+
+   .. grid-item-card::
+      :margin: 0
+
+      :octicon:`shield;1em;sd-text-primary` **Security and Systems**
+
+      IoT security research including signal injection attacks on pairing protocols,
+      plus HPC education tools and agentic tutoring systems for parallel computing.
+
+
+Meet the Team
+-------------
+
+.. grid:: 4
+   :gutter: 2
+
+   .. grid-item-card::
+      :margin: 0
+      :text-align: center
+      :img-top: _static/images/people/laufer.jpg
+
+      **Konstantin Laufer**
+
+      Professor
+
+      Programming Languages, Formal Methods
+
+      `Website <https://laufer.cs.luc.edu/>`__
+
+   .. grid-item-card::
+      :margin: 0
+      :text-align: center
+      :img-top: _static/images/people/abuhamad.jpg
+
+      **Mohammed Abuhamad**
+
+      Assistant Professor
+
+      Security, AI/ML, IoT
+
+      `Website <https://abuhamad.cs.luc.edu/>`__
+
+   .. grid-item-card::
+      :margin: 0
+      :text-align: center
+      :img-top: _static/images/people/thiruvathukal.png
+
+      **George K. Thiruvathukal**
+
+      Professor and Chair
+
+      HPC, Software Engineering, AI
+
+      `Website <https://gkt.sh/>`__
+
+   .. grid-item-card::
+      :margin: 0
+      :text-align: center
+      :img-top: _static/images/people/wang.jpg
+
+      **TaiNing Wang**
+
+      Assistant Professor
+
+      Databases, Formal Methods, AI/ML
+
+      `Website <https://taining.github.io/>`__
+
+
+.. grid:: 1
+   :gutter: 2
+
+   .. grid-item-card::
       :margin: 3 0 0 0
       :text-align: center
 
-      .. button-link:: posts/index.html
-         :click-parent:
+      :octicon:`file;1em` **Research Papers**
+
+      .. button-link:: papers/index.html
          :color: primary
          :expand:
 
-         View Posts
+         Browse Papers
 
 
-   .. grid-item-card:: 📃 CV
-      :margin: 3 0 0 0
-      :text-align: center
-
-      .. button-link:: https://github.com/gkthiruvathukal/cv/releases/latest
-         :click-parent:
-         :color: primary
-         :expand:
-
-         Download via GitHub
-
-
-*******************
- News
-*******************
+***************************
+ Research Updates
+***************************
 
 .. postlist:: 5
    :category: Blog Post
@@ -63,7 +181,16 @@ For more information about me and my work/interests, see :doc:`pages/about`.
    :glob:
    :hidden:
    :maxdepth: 2
-   :caption: Blog Posts
+   :caption: Research Papers
 
-   All Blog Posts <posts/index>
+   All Papers <papers/index>
+   papers/*
+
+.. toctree::
+   :glob:
+   :hidden:
+   :maxdepth: 2
+   :caption: Research Updates
+
+   All Posts <posts/index>
    posts/*

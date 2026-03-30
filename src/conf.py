@@ -12,9 +12,9 @@ Copyright (C) 2025 George K. Thiruvathukal.
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "George K. Thiruvathukal's Blog"
-copyright = "2025, George K. Thiruvathukal"  # noqa: A001
-author = "George K. Thiruvathukal"
+project = "LUC-FMitF | Formal Methods in the Field"
+copyright = "2025, LUC-FMitF Research Group"  # noqa: A001
+author = "LUC-FMitF Research Group"
 release = "0.0.1"
 
 # -- General configuration ---------------------------------------------------
@@ -27,7 +27,6 @@ extensions = [
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_togglebutton",
-    "sphinxcontrib.bibtex",
     "sphinxcontrib.youtube",
 ]
 
@@ -36,34 +35,24 @@ exclude_patterns = ["drafts/*", "archive/*"]
 
 # Ablog configuration options
 blog_authors = {
-    "NMS": ("George K. Thiruvathukal", "https://gkthiruvathukal.github.io/"),
+    "FMitF": ("LUC-FMitF Research Group", "https://github.com/LUC-FMitF"),
+    "GKT": ("George K. Thiruvathukal", "https://gkt.sh/"),
+    "KL": ("Konstantin Läufer", "https://laufer.cs.luc.edu/"),
+    "MA": ("Mohammed Abuhamad", "https://abuhamad.cs.luc.edu/"),
+    "TNW": ("TaiNing Wang", "https://taining.github.io/"),
 }
-blog_default_author = "NMS"
+blog_default_author = "FMitF"
 blog_languages = {
     "en": ("English", None),
 }
 blog_default_language = "en"
 post_show_prev_next = False
-blog_title = "George K. Thiruvathukal's Blog"
+blog_title = "LUC-FMitF Research Updates"
 blog_feed_fulltext = True
 
 # Sphinx auto section label settings
 autosectionlabel_prefix_document = True
 autosectionlabel_maxdepth = 2
-
-# Sphinx BibTex settings
-bibtex_bibfiles = [
-    "bibliography/gkt-magazine.bib",
-    "bibliography/gkt-misc.bib",
-    "bibliography/gkt-incollection.bib",
-    "bibliography/gkt-journal.bib",
-    "bibliography/gkt-inproceedings.bib",
-    "bibliography/gkt-books.bib",
-    "bibliography/gkt-theses.bib",
-    "bibliography/gkt-techreport.bib",
-]
-
-bibtex_default_style = "unsrt"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -74,8 +63,6 @@ html_css_files = ["custom.css"]
 
 # Sphinx Book Theme Settings
 html_theme_options = {
-    "repository_url": "https://github.com/gkthiruvathukal/gkthiruvathukal.github.io",
-    "use_repository_button": True,
     "show_navbar_depth": 0,
     "max_navbar_depth": 2,
     "collapse_navbar": True,
@@ -83,21 +70,9 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "GitHub",
-            "url": "https://github.com/gkthiruvathukal",
+            "url": "https://github.com/LUC-FMitF",
             "icon": "fa-brands fa-github",
-        },
-        {
-            "name": "LinkedIn",
-            "url": "https://www.linkedin.com/in/gkthiruvathukal",
-            "icon": "fa-brands fa-linkedin",
-        },
-        {
-            "name": "Google Scholar",
-            "url": "https://scholar.google.com/citations?user=Ls7yS0IAAAAJ&hl=en",
-            "icon": "fa-brands fa-google-scholar",
         },
     ],
 }
 html_title = project
-html_logo = "_static/images/headshot.png"
-html_favicon = "_static/favicon.png"
