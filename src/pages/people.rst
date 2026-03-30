@@ -135,90 +135,92 @@ Faculty
             `Email <mailto:twang12@luc.edu>`__
 
 
-PhD Students
-------------
+Students
+--------
 
-.. grid:: 3
-   :gutter: 3
+.. dropdown:: Show / Hide All Students
+   :open:
 
-   .. grid-item-card::
-      :margin: 0
-      :text-align: center
-      :img-top: ../_static/images/people/bisharat.png
+   .. dropdown:: PhD Students
+      :open:
 
-      **Arslan Bisharat**
+      .. grid:: 3
+         :gutter: 3
 
-      *PhD Student*
+         .. grid-item-card::
+            :margin: 0
+            :text-align: center
+            :img-top: ../_static/images/people/bisharat.png
 
-      LLM evaluation, formal methods, adversarial ML.
+            **Arslan Bisharat**
 
-      `Website <https://marslan.cs.luc.edu/>`__ |
-      `Email <mailto:marslan@luc.edu>`__
+            *PhD Student*
 
+            LLM evaluation, formal methods, adversarial ML.
 
-MS Students
------------
+            `Website <https://marslan.cs.luc.edu/>`__ |
+            `Email <mailto:marslan@luc.edu>`__
 
-.. grid:: 3
-   :gutter: 3
+   .. dropdown:: MS Students
+      :open:
 
-   .. grid-item-card::
-      :margin: 0
-      :text-align: center
-      :img-top: ../_static/images/people/bhadauria.jpeg
+      .. grid:: 3
+         :gutter: 3
 
-      **Khushboo Bhadauria**
+         .. grid-item-card::
+            :margin: 0
+            :text-align: center
+            :img-top: ../_static/images/people/bhadauria.jpeg
 
-      *MS Student*
+            **Khushboo Bhadauria**
 
-      `Email <mailto:kbhadauria@luc.edu>`__
+            *MS Student*
 
-   .. grid-item-card::
-      :margin: 0
-      :text-align: center
-      :img-top: ../_static/images/people/ortiz.png
+            `Email <mailto:kbhadauria@luc.edu>`__
 
-      **Brian Ortiz**
+         .. grid-item-card::
+            :margin: 0
+            :text-align: center
+            :img-top: ../_static/images/people/ortiz.png
 
-      *MS Student*
+            **Brian Ortiz**
 
-      `Email <mailto:bortiz4@luc.edu>`__
+            *MS Student*
 
+            `Email <mailto:bortiz4@luc.edu>`__
 
-UG Students
------------
+   .. dropdown:: UG Students
+      :open:
 
-.. grid:: 3
-   :gutter: 3
+      .. grid:: 3
+         :gutter: 3
 
-   .. grid-item-card::
-      :margin: 0
-      :text-align: center
-      :img-top: ../_static/images/people/spencer.png
+         .. grid-item-card::
+            :margin: 0
+            :text-align: center
+            :img-top: ../_static/images/people/spencer.png
 
-      **Eric Spencer**
+            **Eric Spencer**
 
-      *Undergraduate Researcher, Computer Science*
+            *Undergraduate Researcher, Computer Science*
 
-      `Website <https://ericspencer.us>`__ |
-      `Email <mailto:espencer2@luc.edu>`__
+            `Website <https://ericspencer.us>`__ |
+            `Email <mailto:espencer2@luc.edu>`__
 
-   .. grid-item-card::
-      :margin: 0
-      :text-align: center
+         .. grid-item-card::
+            :margin: 0
+            :text-align: center
 
-      **Anisa Ramos**
+            **Anisa Ramos**
 
-      *Undergraduate Researcher*
+            *Undergraduate Researcher*
 
-      Photo coming soon.
+            Photo coming soon.
 
+   .. dropdown:: Interns
+      :open:
 
-Interns
--------
-
-.. note::
-   No current interns. Interested? See :doc:`Get Involved <prospective-students>`.
+      No current interns. Interested? See :doc:`Get Involved <prospective-students>`.
 
 
 Previous Members
