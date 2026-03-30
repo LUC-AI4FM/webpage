@@ -39,6 +39,7 @@ Faculty
             Published at ACM CCS, IEEE TDSC, IEEE TIFS, and IEEE ICDCS.
 
             `Website <https://abuhamad.cs.luc.edu/>`__ |
+            `Google Scholar <https://scholar.google.com/citations?user=V7FWdNoAAAAJ&hl=en>`__ |
             `Email <mailto:mabuhamad@luc.edu>`__
 
    .. grid-item-card::
