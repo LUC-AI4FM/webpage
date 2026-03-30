@@ -43,15 +43,9 @@ jobs:
           python3 -m pip install uv && \
           python3 -m uv sync
 
-      - name: Get Zotero Bibliography
-        run: |
-          ./tools/get-zotero-bibtex.sh
-          tree -L 2 .
-
       - name: Build the site
         run: |
           ./.venv/bin/sphinx-build --write-all src build
-          echo gkt.sh > build/CNAME
 
       - name: Cache save
         id: cache-save
