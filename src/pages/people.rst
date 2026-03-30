@@ -135,8 +135,8 @@ Faculty
             `twang12@luc.edu <mailto:twang12@luc.edu>`__
 
 
-Students
---------
+PhD Students
+------------
 
 .. grid:: 3
    :gutter: 3
@@ -148,12 +148,73 @@ Students
 
       **Arslan Bisharat**
 
-      *Graduate Researcher*
+      *PhD Student*
 
-      LLM evaluation, formal methods, adversarial ML. MS in Data Science, Loyola.
+      LLM evaluation, formal methods, adversarial ML.
 
       `Website <https://marslan.cs.luc.edu/>`__ |
       `marslan@luc.edu <mailto:marslan@luc.edu>`__
+
+
+MS Students
+-----------
+
+.. grid:: 3
+   :gutter: 3
+
+   .. grid-item-card::
+      :margin: 0
+      :text-align: center
+
+      **Khushboo Bhadauria**
+
+      *MS Student*
+
+      Photo coming soon.
+
+   .. grid-item-card::
+      :margin: 0
+      :text-align: center
+
+      **Brian Ortiz**
+
+      *MS Student*
+
+      Photo coming soon.
+
+
+UG Students
+-----------
+
+.. grid:: 3
+   :gutter: 3
+
+   .. grid-item-card::
+      :margin: 0
+      :text-align: center
+
+      **Eric Spencer**
+
+      *Undergraduate Researcher*
+
+      Photo coming soon.
+
+   .. grid-item-card::
+      :margin: 0
+      :text-align: center
+
+      **Anisa Ramos**
+
+      *Undergraduate Researcher*
+
+      Photo coming soon.
+
+
+Interns
+-------
+
+.. note::
+   No current interns. Interested? See :doc:`Get Involved <prospective-students>`.
 
 
 Previous Members
