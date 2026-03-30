@@ -27,6 +27,9 @@ dependencies = [
 Homepage = "https://ai4fm.cs.luc.edu"
 Repository = "https://github.com/LoyolaChicagoCS/ai4fm"
 
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
