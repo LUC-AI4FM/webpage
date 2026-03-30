@@ -211,12 +211,13 @@ Students
          .. grid-item-card::
             :margin: 0
             :text-align: center
+            :img-top: ../_static/images/people/ramos.png
 
             **Anisa Ramos**
 
             *Undergraduate Researcher*
 
-            Photo coming soon.
+            `Email <mailto:anisapr14@gmail.com>`__
 
    .. dropdown:: Interns
       :open:
