@@ -38,7 +38,7 @@ Faculty
             and data engineering. PhD from the Courant Institute at NYU. Joined Loyola in 1992,
             served as department chair 2012-2018.
 
-            `laufer.cs.luc.edu <https://laufer.cs.luc.edu/>`__ |
+            `Website <https://laufer.cs.luc.edu/>`__ |
             `GitHub <https://github.com/laufer>`__
 
    .. grid-item-card::
@@ -69,8 +69,8 @@ Faculty
             security, adversarial ML, IoT security, and deep learning for authentication.
             Published at ACM CCS, IEEE TDSC, IEEE TIFS, and IEEE ICDCS.
 
-            `abuhamad.cs.luc.edu <https://abuhamad.cs.luc.edu/>`__ |
-            `mabuhamad@luc.edu <mailto:mabuhamad@luc.edu>`__
+            `Website <https://abuhamad.cs.luc.edu/>`__ |
+            `Email <mailto:mabuhamad@luc.edu>`__
 
    .. grid-item-card::
       :margin: 0
@@ -100,7 +100,7 @@ Faculty
             Former EiC of IEEE Computing in Science and Engineering. Visiting Computer
             Scientist at Argonne National Laboratory. Author of 200+ works.
 
-            `gkt.sh <https://gkt.sh/>`__ |
+            `Website <https://gkt.sh/>`__ |
             `Google Scholar <https://scholar.google.com/citations?user=Ls7yS0IAAAAJ&hl=en>`__ |
             `GitHub <https://github.com/gkthiruvathukal>`__
 
@@ -131,8 +131,8 @@ Faculty
             Research focuses on databases, query processing, graph data, and AI accountability.
             PhD from the National University of Singapore. Microsoft Research Asia Fellow (2019).
 
-            `taining.github.io <https://taining.github.io/>`__ |
-            `twang12@luc.edu <mailto:twang12@luc.edu>`__
+            `Website <https://taining.github.io/>`__ |
+            `Email <mailto:twang12@luc.edu>`__
 
 
 PhD Students
@@ -153,7 +153,7 @@ PhD Students
       LLM evaluation, formal methods, adversarial ML.
 
       `Website <https://marslan.cs.luc.edu/>`__ |
-      `marslan@luc.edu <mailto:marslan@luc.edu>`__
+      `Email <mailto:marslan@luc.edu>`__
 
 
 MS Students
@@ -171,7 +171,7 @@ MS Students
 
       *MS Student*
 
-      `kbhadauria@luc.edu <mailto:kbhadauria@luc.edu>`__
+      `Email <mailto:kbhadauria@luc.edu>`__
 
    .. grid-item-card::
       :margin: 0
@@ -182,7 +182,7 @@ MS Students
 
       *MS Student*
 
-      `bortiz4@luc.edu <mailto:bortiz4@luc.edu>`__
+      `Email <mailto:bortiz4@luc.edu>`__
 
 
 UG Students
@@ -200,8 +200,8 @@ UG Students
 
       *Undergraduate Researcher, Computer Science*
 
-      `ericspencer.us <https://ericspencer.us>`__ |
-      `espencer2@luc.edu <mailto:espencer2@luc.edu>`__
+      `Website <https://ericspencer.us>`__ |
+      `Email <mailto:espencer2@luc.edu>`__
 
    .. grid-item-card::
       :margin: 0
