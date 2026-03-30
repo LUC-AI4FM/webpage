@@ -165,12 +165,13 @@ MS Students
    .. grid-item-card::
       :margin: 0
       :text-align: center
+      :img-top: ../_static/images/people/bhadauria.jpeg
 
       **Khushboo Bhadauria**
 
       *MS Student*
 
-      Photo coming soon.
+      `kbhadauria@luc.edu <mailto:kbhadauria@luc.edu>`__
 
    .. grid-item-card::
       :margin: 0
@@ -192,12 +193,14 @@ UG Students
    .. grid-item-card::
       :margin: 0
       :text-align: center
+      :img-top: ../_static/images/people/spencer.png
 
       **Eric Spencer**
 
-      *Undergraduate Researcher*
+      *Undergraduate Researcher, Computer Science*
 
-      Photo coming soon.
+      `ericspencer.us <https://ericspencer.us>`__ |
+      `espencer2@luc.edu <mailto:espencer2@luc.edu>`__
 
    .. grid-item-card::
       :margin: 0
