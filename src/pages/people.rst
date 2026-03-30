@@ -21,37 +21,6 @@ Faculty
             :columns: 3
             :class: team-photo-col
 
-            .. image:: ../_static/images/people/laufer.jpg
-               :alt: Konstantin Laufer
-               :class: profile-photo
-               :width: 100%
-
-         .. grid-item::
-            :columns: 9
-            :class: team-text-col
-
-            **Konstantin Laufer**
-
-            *Professor of Computer Science, Loyola University Chicago*
-
-            Research spans programming languages, software architecture, distributed systems,
-            and data engineering. PhD from the Courant Institute at NYU. Joined Loyola in 1992,
-            served as department chair 2012-2018.
-
-            `Website <https://laufer.cs.luc.edu/>`__ |
-            `GitHub <https://github.com/laufer>`__
-
-   .. grid-item-card::
-      :margin: 0
-      :class-card: team-card
-
-      .. grid:: 2
-         :gutter: 0
-
-         .. grid-item::
-            :columns: 3
-            :class: team-photo-col
-
             .. image:: ../_static/images/people/abuhamad.jpg
                :alt: Mohammed Abuhamad
                :class: profile-photo
@@ -71,6 +40,37 @@ Faculty
 
             `Website <https://abuhamad.cs.luc.edu/>`__ |
             `Email <mailto:mabuhamad@luc.edu>`__
+
+   .. grid-item-card::
+      :margin: 0
+      :class-card: team-card
+
+      .. grid:: 2
+         :gutter: 0
+
+         .. grid-item::
+            :columns: 3
+            :class: team-photo-col
+
+            .. image:: ../_static/images/people/laufer.jpg
+               :alt: Konstantin Laufer
+               :class: profile-photo
+               :width: 100%
+
+         .. grid-item::
+            :columns: 9
+            :class: team-text-col
+
+            **Konstantin Laufer**
+
+            *Professor of Computer Science, Loyola University Chicago*
+
+            Research spans programming languages, software architecture, distributed systems,
+            and data engineering. PhD from the Courant Institute at NYU. Joined Loyola in 1992,
+            served as department chair 2012-2018.
+
+            `Website <https://laufer.cs.luc.edu/>`__ |
+            `GitHub <https://github.com/laufer>`__
 
    .. grid-item-card::
       :margin: 0
