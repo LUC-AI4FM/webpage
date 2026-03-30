@@ -1,7 +1,7 @@
 Research Papers
 ===============
 
-Research outputs from the FMitF group at Loyola University Chicago.
+Research outputs from the AI4FM group at Loyola University Chicago.
 
 .. grid:: 1
    :gutter: 3

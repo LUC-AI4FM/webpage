@@ -7,10 +7,10 @@ interested in formal methods, LLMs, and rigorous software engineering.
 Contributing to Our Projects
 -----------------------------
 
-All of our projects are open source on `GitHub <https://github.com/LUC-FMitF>`__.
+All of our projects are open source on `GitHub <https://github.com/LUC-AI4FM>`__.
 The best way to get started is to:
 
-1. **Explore our repositories** at https://github.com/LUC-FMitF - star repos you find valuable.
+1. **Explore our repositories** at https://github.com/LUC-AI4FM - star repos you find valuable.
 2. **Read recent research updates** on this site to understand our current directions.
 3. **Open an issue or discussion** on a repository if you have questions, ideas, or bug reports.
 4. **Submit a pull request** with improvements, fixes, or new features.
@@ -21,7 +21,7 @@ Each repository has its own ``CONTRIBUTING.md`` or ``README.md`` with setup inst
 Joining as a Student Researcher
 ---------------------------------
 
-If you are a student at Loyola University Chicago interested in joining FMitF:
+If you are a student at Loyola University Chicago interested in joining AI4FM:
 
 - Read through our :doc:`projects <works>` and :doc:`recent updates <../posts/index>` to understand our current work.
 - Come prepared to discuss which projects align with your interests and how you can contribute.
@@ -54,7 +54,7 @@ faculty directly via the `Loyola CS Department directory <https://www.luc.edu/cs
 Community Standards
 --------------------
 
-All contributors and members of the FMitF community are expected to follow recognized
+All contributors and members of the AI4FM community are expected to follow recognized
 community standards for respectful and inclusive collaboration:
 
 - `ACM Code of Ethics <https://www.acm.org/code-of-ethics>`__

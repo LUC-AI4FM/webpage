@@ -1,11 +1,11 @@
-About FMitF
+About AI4FM
 ===========
 
-The **Formal Methods in the Field (FMitF)** research group is part of the
+The **AI for Formal Methods (AI4FM)** research group is part of the
 `Department of Computer Science <https://www.luc.edu/cs/>`__ at
 `Loyola University Chicago <https://luc.edu>`__.
 We are a community of researchers, students, and collaborators advancing
-*formal methods*, *rigorous system design*, and *reproducible research tools*.
+*AI-assisted formal methods*, *rigorous system design*, and *reproducible research tools*.
 
 Mission
 -------

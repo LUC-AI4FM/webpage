@@ -12,7 +12,7 @@ Evaluating Natural-Language-to-TLA+ Generation
    * - **Venue**
      - To be announced
    * - **Authors**
-     - Anonymous (FMitF, Loyola University Chicago)
+     - Anonymous (AI4FM, Loyola University Chicago)
    * - **DOI / PDF**
      - Available upon publication
 
@@ -78,7 +78,7 @@ become far more accessible to engineers who understand their system but lack spe
 
 This paper shows that current LLMs are not there yet. Reaching reliable TLA+ generation
 will require targeted work on reasoning alignment, formal language training data,
-and evaluation-driven prompting strategies - all active directions for FMitF.
+and evaluation-driven prompting strategies - all active directions for AI4FM.
 
 
 Citation

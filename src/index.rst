@@ -1,12 +1,12 @@
 #############################################
- Formal Methods in the Field
+ AI for Formal Methods
 #############################################
 
-Welcome to **FMitF** - the Formal Methods in the Field research group at
+Welcome to **AI4FM** - the AI for Formal Methods research group at
 `Loyola University Chicago <https://luc.edu>`__, part of the
 `Department of Computer Science <https://luc.edu/cs>`__.
 We advance formal methods, rigorous system design, and reproducible tools at the
-intersection of logic, mathematics, AI, and real-world computing.
+intersection of AI, logic, mathematics, and real-world computing.
 
 Featured Research
 -----------------
@@ -159,7 +159,7 @@ Meet the Team
 ***************************
 
 .. postlist:: 5
-   :category: Blog Post
+   :category: Research Update
    :date: %A, %B %d, %Y
    :format: {date}: {title}
    :excerpts:

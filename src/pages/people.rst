@@ -1,7 +1,7 @@
 Team
 ====
 
-The FMitF research group brings together faculty and students from Loyola University Chicago's
+The AI4FM research group brings together faculty and students from Loyola University Chicago's
 `Department of Computer Science <https://www.luc.edu/cs/>`__.
 
 Faculty
@@ -39,7 +39,8 @@ Faculty
             served as department chair 2012-2018.
 
             `laufer.cs.luc.edu <https://laufer.cs.luc.edu/>`__ |
-            `GitHub <https://github.com/laufer>`__
+            `GitHub <https://github.com/laufer>`__ |
+            `klaufer@luc.edu <mailto:klaufer@luc.edu>`__
 
    .. grid-item-card::
       :margin: 0
@@ -69,7 +70,8 @@ Faculty
             security, adversarial ML, IoT security, and deep learning for authentication.
             Published at ACM CCS, IEEE TDSC, IEEE TIFS, and IEEE ICDCS.
 
-            `abuhamad.cs.luc.edu <https://abuhamad.cs.luc.edu/>`__
+            `abuhamad.cs.luc.edu <https://abuhamad.cs.luc.edu/>`__ |
+            `mabuhamad@luc.edu <mailto:mabuhamad@luc.edu>`__
 
    .. grid-item-card::
       :margin: 0
@@ -101,7 +103,8 @@ Faculty
 
             `gkt.sh <https://gkt.sh/>`__ |
             `Google Scholar <https://scholar.google.com/citations?user=Ls7yS0IAAAAJ&hl=en>`__ |
-            `GitHub <https://github.com/gkthiruvathukal>`__
+            `GitHub <https://github.com/gkthiruvathukal>`__ |
+            `gkt@luc.edu <mailto:gkt@luc.edu>`__
 
    .. grid-item-card::
       :margin: 0
@@ -130,7 +133,8 @@ Faculty
             Research focuses on databases, query processing, graph data, and AI accountability.
             PhD from the National University of Singapore. Microsoft Research Asia Fellow (2019).
 
-            `taining.github.io <https://taining.github.io/>`__
+            `taining.github.io <https://taining.github.io/>`__ |
+            `twang28@luc.edu <mailto:twang28@luc.edu>`__
 
 
 Students
@@ -150,7 +154,8 @@ Students
 
       LLM evaluation, formal methods, adversarial ML. MS in Data Science, Loyola.
 
-      `Website <https://marslan.cs.luc.edu/>`__
+      `Website <https://marslan.cs.luc.edu/>`__ |
+      `abisharat@luc.edu <mailto:abisharat@luc.edu>`__
 
 
 Previous Members
