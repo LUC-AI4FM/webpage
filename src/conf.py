@@ -31,7 +31,7 @@ extensions = [
 ]
 
 templates_path = ["_templates"]
-exclude_patterns = ["drafts/*", "archive/*"]
+exclude_patterns = ["drafts/*", "archive/*", "_extra/*"]
 
 # Ablog configuration options
 blog_authors = {
@@ -76,3 +76,6 @@ html_theme_options = {
     ],
 }
 html_title = project
+
+# Extra paths to copy directly into the build output (not processed by Sphinx)
+html_extra_path = ["_extra"]

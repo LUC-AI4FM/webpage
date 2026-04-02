@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatTLA Dataset Dashboard — LUC-FMitF</title>
+<style>
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --surface2: #232733;
+  --border: #2e3345;
+  --text: #e1e4ed;
+  --text-dim: #8b91a5;
+  --accent: #6c8cff;
+  --accent2: #4ecdc4;
+  --gold: #f0c040;
+  --silver: #a0b0c0;
+  --bronze: #cd7f32;
+  --green: #4ecf73;
+  --red: #f05050;
+  --radius: 8px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header */
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header h1 { font-size: 1.4rem; font-weight: 600; }
+.header h1 span { color: var(--accent); }
+.header .subtitle { color: var(--text-dim); font-size: 0.85rem; }
+.header .nav-home {
+  margin-left: auto;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.header .nav-home:hover { color: var(--text); border-color: var(--accent); text-decoration: none; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px;
+  overflow-x: auto;
+}
+.tab {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+  user-select: none;
+}
+.tab:hover { color: var(--text); }
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* Content */
+.content { max-width: 1400px; margin: 0 auto; padding: 24px 32px; }
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* Stats cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+}
+.stat-card .value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.2;
+}
+.stat-card .label {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Section headers */
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+/* Charts */
+.chart-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.chart-container h3 { font-size: 0.95rem; margin-bottom: 16px; color: var(--text-dim); }
+svg text { fill: var(--text-dim); font-size: 11px; }
+svg .axis-line { stroke: var(--border); }
+svg .grid-line { stroke: var(--border); stroke-dasharray: 4 4; opacity: 0.5; }
+
+/* Tier badges */
+.tier {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.tier.gold { background: rgba(240,192,64,0.15); color: var(--gold); }
+.tier.silver { background: rgba(160,176,192,0.15); color: var(--silver); }
+.tier.bronze { background: rgba(205,127,50,0.15); color: var(--bronze); }
+.tier.bugfix { background: rgba(108,140,255,0.15); color: var(--accent); }
+.tier.description_sft { background: rgba(78,205,196,0.15); color: var(--accent2); }
+.tier.untagged { background: rgba(139,145,165,0.15); color: var(--text-dim); }
+
+/* Tables */
+.table-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+th {
+  background: var(--surface2);
+  color: var(--text-dim);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+}
+tr:hover { background: var(--surface2); }
+tr:last-child td { border-bottom: none; }
+
+/* Search / Filter */
+.toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.search-input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  color: var(--text);
+  font-size: 0.85rem;
+  outline: none;
+  min-width: 260px;
+}
+.search-input:focus { border-color: var(--accent); }
+.search-input::placeholder { color: var(--text-dim); }
+.filter-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.filter-btn:hover, .filter-btn.active { border-color: var(--accent); color: var(--accent); }
+
+/* Code viewer */
+.code-viewer {
+  background: #0d0f14;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  white-space: pre;
+  color: #c5cee0;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.code-viewer .kw { color: #c678dd; }
+.code-viewer .op { color: #56b6c2; }
+.code-viewer .cm { color: #5c6370; font-style: italic; }
+.code-viewer .str { color: #98c379; }
+.code-viewer .mod { color: #e5c07b; font-weight: bold; }
+
+/* Spec card */
+.spec-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.spec-card-header {
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.spec-card-header:hover { background: var(--surface2); }
+.spec-card-header .name { font-weight: 600; font-size: 0.95rem; }
+.spec-card-header .source { color: var(--text-dim); font-size: 0.8rem; margin-left: auto; }
+.spec-card-header .toggle { color: var(--text-dim); font-size: 0.85rem; transition: transform 0.2s; }
+.spec-card-header .toggle.open { transform: rotate(90deg); }
+.spec-card-body {
+  display: none;
+  padding: 0 20px 16px;
+  border-top: 1px solid var(--border);
+}
+.spec-card-body.open { display: block; padding-top: 16px; }
+.spec-desc { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 12px; line-height: 1.6; }
+
+/* Bar chart (horizontal) */
+.bar-chart { margin: 8px 0; }
+.bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+.bar-label { width: 100px; font-size: 0.8rem; color: var(--text-dim); text-align: right; flex-shrink: 0; }
+.bar-track { flex: 1; height: 24px; background: var(--surface2); border-radius: 4px; position: relative; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s; display: flex; align-items: center; padding-left: 8px; font-size: 0.75rem; font-weight: 600; }
+.bar-value { font-size: 0.8rem; color: var(--text-dim); width: 50px; text-align: right; flex-shrink: 0; }
+
+/* Difficulty dots */
+.difficulty { display: flex; gap: 3px; }
+.difficulty .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--border);
+}
+.difficulty .dot.filled { background: var(--accent); }
+
+/* Pass/fail indicators */
+.pass { color: var(--green); font-weight: 600; }
+.fail { color: var(--red); }
+
+/* Donut chart */
+.donut-container { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+.donut-legend { display: flex; flex-direction: column; gap: 6px; }
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; }
+.legend-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.page-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px 12px;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.page-btn:hover, .page-btn.active { border-color: var(--accent); color: var(--accent); }
+.page-btn:disabled { opacity: 0.4; cursor: default; }
+
+/* Two columns */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header { padding: 12px 16px; flex-wrap: wrap; }
+  .content { padding: 16px; }
+  .tabs { padding: 0 16px; }
+}
+
+/* Loading */
+.loading { text-align: center; padding: 60px; color: var(--text-dim); }
+.loading .spinner {
+  width: 40px; height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.result-count { color: var(--text-dim); font-size: 0.8rem; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1><span>ChatTLA</span> Dataset Dashboard</h1>
+    <div class="subtitle">Training data and benchmarks for TLA+ specification generation</div>
+  </div>
+  <a href="https://ai4fm.cs.luc.edu/" class="nav-home">LUC-FMitF Home</a>
+</div>
+
+<div class="tabs" id="tabs">
+  <div class="tab active" data-tab="overview">Overview</div>
+  <div class="tab" data-tab="training">Training Data</div>
+  <div class="tab" data-tab="benchmarks">Benchmarks</div>
+  <div class="tab" data-tab="results">Benchmark Results</div>
+  <div class="tab" data-tab="specifications">Specifications</div>
+  <div class="tab" data-tab="modules">Modules</div>
+</div>
+
+<div class="content">
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    Loading dataset...
+  </div>
+
+  <!-- Overview -->
+  <div class="panel" id="panel-overview">
+    <div class="stats-grid" id="stats-grid"></div>
+    <div class="two-col">
+      <div class="chart-container">
+        <h3>Training Data by Tier</h3>
+        <div id="chart-train-tiers"></div>
+      </div>
+      <div class="chart-container">
+        <h3>RL-Augmented Data by Tier</h3>
+        <div id="chart-aug-tiers"></div>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="chart-container">
+        <h3>Benchmark Domains</h3>
+        <div id="chart-domains"></div>
+      </div>
+      <div class="chart-container">
+        <h3>Dataset Composition</h3>
+        <div id="chart-composition"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Training Data -->
+  <div class="panel" id="panel-training">
+    <div class="toolbar">
+      <input class="search-input" id="train-search" placeholder="Search training examples..." />
+      <div id="train-filters"></div>
+      <span class="result-count" id="train-count"></span>
+    </div>
+    <div class="table-wrapper" style="max-height: 650px; overflow-y: auto;">
+      <table>
+        <thead><tr>
+          <th style="width:50px">#</th>
+          <th style="width:140px">Module</th>
+          <th style="width:80px">Tier</th>
+          <th>Description</th>
+          <th style="width:80px">Spec Size</th>
+        </tr></thead>
+        <tbody id="train-table"></tbody>
+      </table>
+    </div>
+    <div class="pagination" id="train-pagination"></div>
+  </div>
+
+  <!-- Benchmarks -->
+  <div class="panel" id="panel-benchmarks">
+    <div class="toolbar">
+      <input class="search-input" id="bench-search" placeholder="Search benchmarks..." />
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr>
+          <th style="width:70px">ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th style="width:100px">Domain</th>
+          <th style="width:80px">Difficulty</th>
+          <th>Expected Invariants</th>
+        </tr></thead>
+        <tbody id="bench-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Benchmark Results -->
+  <div class="panel" id="panel-results">
+    <div class="chart-container">
+      <h3>Model Performance: SANY Parse Rate &amp; TLC Model-Check Rate over RL Training Cycles</h3>
+      <svg id="timeline-chart" width="100%" height="350"></svg>
+    </div>
+    <div class="two-col">
+      <div class="chart-container">
+        <h3>Baseline vs Latest (per benchmark)</h3>
+        <div id="comparison-chart"></div>
+      </div>
+      <div class="chart-container">
+        <h3>Latest Results Summary</h3>
+        <div id="latest-summary"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Specifications -->
+  <div class="panel" id="panel-specifications">
+    <div class="toolbar">
+      <input class="search-input" id="spec-search" placeholder="Search specifications..." />
+      <span class="result-count" id="spec-count"></span>
+    </div>
+    <div id="spec-list"></div>
+  </div>
+
+  <!-- Modules -->
+  <div class="panel" id="panel-modules">
+    <div class="toolbar">
+      <input class="search-input" id="module-search" placeholder="Search modules..." />
+      <span class="result-count" id="module-count"></span>
+    </div>
+    <div class="table-wrapper" style="max-height: 700px; overflow-y: auto;">
+      <table>
+        <thead><tr>
+          <th style="width:160px">Module</th>
+          <th>Algorithm / Description</th>
+          <th style="width:120px">Variables</th>
+          <th style="width:120px">Actions</th>
+        </tr></thead>
+        <tbody id="module-table"></tbody>
+      </table>
+    </div>
+    <div class="pagination" id="module-pagination"></div>
+  </div>
+</div>
+
+<script>
+const TIER_COLORS = {
+  gold: '#f0c040', silver: '#a0b0c0', bronze: '#cd7f32',
+  bugfix: '#6c8cff', description_sft: '#4ecdc4', untagged: '#5c6370', unknown: '#5c6370'
+};
+const DOMAIN_COLORS = {
+  scheduling: '#f06292', transaction: '#ba68c8', consensus: '#64b5f6',
+  storage: '#4ecdc4', networking: '#ffd54f'
+};
+
+let DATA = null;
+
+async function loadData() {
+  const resp = await fetch('dashboard_data.json');
+  DATA = await resp.json();
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('panel-overview').classList.add('active');
+  renderOverview();
+}
+
+// --- Tab switching ---
+document.getElementById('tabs').addEventListener('click', (e) => {
+  if (!e.target.classList.contains('tab')) return;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  e.target.classList.add('active');
+  const tabId = e.target.dataset.tab;
+  document.getElementById('panel-' + tabId).classList.add('active');
+
+  if (tabId === 'training' && !document.getElementById('train-table').children.length) renderTraining();
+  if (tabId === 'benchmarks' && !document.getElementById('bench-table').children.length) renderBenchmarks();
+  if (tabId === 'results') renderResults();
+  if (tabId === 'specifications' && !document.getElementById('spec-list').children.length) renderSpecifications();
+  if (tabId === 'modules' && !document.getElementById('module-table').children.length) renderModules();
+});
+
+// --- Overview ---
+function renderOverview() {
+  const s = DATA.stats;
+  const c = s.counts;
+  const cards = [
+    { value: c.training_examples, label: 'Training Examples' },
+    { value: c.augmented_specs.toLocaleString(), label: 'RL-Augmented Specs' },
+    { value: c.validated_specs, label: 'Validated Specs' },
+    { value: c.benchmarks, label: 'Benchmarks' },
+    { value: DATA.modules.length, label: 'TLA+ Modules' },
+    { value: c.dpo_pairs, label: 'DPO Pairs' },
+    { value: c.rejected_specs, label: 'Rejected Specs' },
+  ];
+  document.getElementById('stats-grid').innerHTML = cards.map(c =>
+    `<div class="stat-card"><div class="value">${c.value}</div><div class="label">${c.label}</div></div>`
+  ).join('');
+
+  renderBarChart('chart-train-tiers', s.train_tiers, TIER_COLORS);
+  renderBarChart('chart-aug-tiers', s.augmented_tiers, TIER_COLORS);
+  renderBarChart('chart-domains', s.benchmark_domains, DOMAIN_COLORS);
+
+  // Composition donut
+  const comp = [
+    { label: 'Training (SFT)', value: c.training_examples, color: '#6c8cff' },
+    { label: 'RL-Augmented', value: c.augmented_specs, color: '#4ecdc4' },
+    { label: 'Validated', value: c.validated_specs, color: '#f0c040' },
+    { label: 'Rejected', value: c.rejected_specs, color: '#cd7f32' },
+    { label: 'DPO Pairs', value: c.dpo_pairs, color: '#f06292' },
+  ];
+  renderDonut('chart-composition', comp);
+}
+
+function renderBarChart(containerId, data, colors) {
+  const maxVal = Math.max(...Object.values(data));
+  const container = document.getElementById(containerId);
+  container.innerHTML = '<div class="bar-chart">' + Object.entries(data).map(([label, value]) => {
+    const pct = (value / maxVal * 100).toFixed(1);
+    const color = colors[label] || '#6c8cff';
+    return `<div class="bar-row">
+      <span class="bar-label">${label}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${color}">${value > maxVal * 0.15 ? value : ''}</div></div>
+      <span class="bar-value">${value}</span>
+    </div>`;
+  }).join('') + '</div>';
+}
+
+function renderDonut(containerId, items) {
+  const total = items.reduce((s, i) => s + i.value, 0);
+  const container = document.getElementById(containerId);
+  const size = 140, cx = size/2, cy = size/2, r = 55, inner = 35;
+  let startAngle = -Math.PI / 2;
+
+  let paths = '';
+  items.forEach(item => {
+    const angle = (item.value / total) * 2 * Math.PI;
+    const endAngle = startAngle + angle;
+    const large = angle > Math.PI ? 1 : 0;
+    const x1o = cx + r * Math.cos(startAngle), y1o = cy + r * Math.sin(startAngle);
+    const x2o = cx + r * Math.cos(endAngle), y2o = cy + r * Math.sin(endAngle);
+    const x1i = cx + inner * Math.cos(endAngle), y1i = cy + inner * Math.sin(endAngle);
+    const x2i = cx + inner * Math.cos(startAngle), y2i = cy + inner * Math.sin(startAngle);
+    paths += `<path d="M${x1o},${y1o} A${r},${r} 0 ${large} 1 ${x2o},${y2o} L${x1i},${y1i} A${inner},${inner} 0 ${large} 0 ${x2i},${y2i} Z" fill="${item.color}" opacity="0.85"/>`;
+    startAngle = endAngle;
+  });
+
+  container.innerHTML = `<div class="donut-container">
+    <svg width="${size}" height="${size}">${paths}
+      <text x="${cx}" y="${cy-4}" text-anchor="middle" fill="var(--text)" font-size="18" font-weight="700">${total.toLocaleString()}</text>
+      <text x="${cx}" y="${cy+14}" text-anchor="middle" fill="var(--text-dim)" font-size="10">total</text>
+    </svg>
+    <div class="donut-legend">${items.map(i =>
+      `<div class="legend-item"><div class="legend-dot" style="background:${i.color}"></div>${i.label}: <strong>${i.value.toLocaleString()}</strong></div>`
+    ).join('')}</div>
+  </div>`;
+}
+
+// --- Training Data ---
+let trainPage = 0;
+const TRAIN_PER_PAGE = 30;
+let trainFilter = null;
+
+function renderTraining() {
+  const tiers = [...new Set(DATA.training_data.map(d => d.tier))];
+  document.getElementById('train-filters').innerHTML = `<button class="filter-btn active" onclick="setTrainFilter(null)">All</button>` +
+    tiers.map(t => `<button class="filter-btn" onclick="setTrainFilter('${t}')">${t}</button>`).join('');
+  renderTrainTable();
+  document.getElementById('train-search').oninput = () => { trainPage = 0; renderTrainTable(); };
+}
+
+function setTrainFilter(tier) {
+  trainFilter = tier;
+  trainPage = 0;
+  document.querySelectorAll('#train-filters .filter-btn').forEach(b => {
+    b.classList.toggle('active', (tier === null && b.textContent === 'All') || b.textContent === tier);
+  });
+  renderTrainTable();
+}
+
+function renderTrainTable() {
+  const q = document.getElementById('train-search').value.toLowerCase();
+  let items = DATA.training_data;
+  if (trainFilter) items = items.filter(d => d.tier === trainFilter);
+  if (q) items = items.filter(d => d.module_name.toLowerCase().includes(q) || d.description.toLowerCase().includes(q));
+
+  document.getElementById('train-count').textContent = `${items.length} examples`;
+  const page = items.slice(trainPage * TRAIN_PER_PAGE, (trainPage + 1) * TRAIN_PER_PAGE);
+  document.getElementById('train-table').innerHTML = page.map(d =>
+    `<tr>
+      <td>${d.index + 1}</td>
+      <td><strong>${escHtml(d.module_name)}</strong></td>
+      <td><span class="tier ${d.tier}">${d.tier}</span></td>
+      <td style="max-width:500px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${escAttr(d.description)}">${escHtml(d.description.substring(0, 120))}${d.description.length > 120 ? '...' : ''}</td>
+      <td>${formatBytes(d.spec_length)}</td>
+    </tr>`
+  ).join('');
+
+  const totalPages = Math.ceil(items.length / TRAIN_PER_PAGE);
+  renderPagination('train-pagination', totalPages, trainPage, p => { trainPage = p; renderTrainTable(); });
+}
+
+// --- Benchmarks ---
+function renderBenchmarks() {
+  const render = () => {
+    const q = document.getElementById('bench-search').value.toLowerCase();
+    let items = DATA.benchmarks;
+    if (q) items = items.filter(b => b.name.toLowerCase().includes(q) || b.description.toLowerCase().includes(q) || b.domain.toLowerCase().includes(q));
+    document.getElementById('bench-table').innerHTML = items.map(b =>
+      `<tr>
+        <td><strong>${b.id}</strong></td>
+        <td>${escHtml(b.name)}</td>
+        <td style="max-width:350px">${escHtml(b.description)}</td>
+        <td><span style="color:${DOMAIN_COLORS[b.domain] || '#888'}">${b.domain}</span></td>
+        <td>${renderDifficulty(b.difficulty)}</td>
+        <td>${b.expected_invariants.map(i => `<code style="background:var(--surface2);padding:2px 6px;border-radius:3px;font-size:0.75rem">${escHtml(i)}</code>`).join(' ')}</td>
+      </tr>`
+    ).join('');
+  };
+  render();
+  document.getElementById('bench-search').oninput = render;
+}
+
+function renderDifficulty(level) {
+  return '<div class="difficulty">' + Array.from({length: 5}, (_, i) =>
+    `<div class="dot ${i < level ? 'filled' : ''}"></div>`
+  ).join('') + '</div>';
+}
+
+// --- Benchmark Results ---
+function renderResults() {
+  renderTimeline();
+  renderComparison();
+  renderLatestSummary();
+}
+
+function renderTimeline() {
+  const svg = document.getElementById('timeline-chart');
+  const data = DATA.benchmark_timeline;
+  if (!data.length) return;
+
+  const rect = svg.getBoundingClientRect();
+  const W = rect.width || 900, H = 350;
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+
+  const pad = { top: 30, right: 80, bottom: 50, left: 60 };
+  const gW = W - pad.left - pad.right;
+  const gH = H - pad.top - pad.bottom;
+
+  const maxCycle = Math.max(...data.map(d => d.cycle));
+  const minCycle = Math.min(...data.map(d => d.cycle));
+
+  const xScale = c => pad.left + ((c - minCycle) / (maxCycle - minCycle || 1)) * gW;
+  const yScale = v => pad.top + (1 - v) * gH;
+
+  // Grid lines
+  let html = '';
+  for (let v = 0; v <= 1; v += 0.25) {
+    const y = yScale(v);
+    html += `<line class="grid-line" x1="${pad.left}" y1="${y}" x2="${W-pad.right}" y2="${y}"/>`;
+    html += `<text x="${pad.left - 8}" y="${y + 4}" text-anchor="end">${(v*100).toFixed(0)}%</text>`;
+  }
+
+  // X axis labels
+  const labelInterval = Math.max(1, Math.floor(data.length / 8));
+  data.forEach((d, i) => {
+    if (i % labelInterval === 0) {
+      html += `<text x="${xScale(d.cycle)}" y="${H - 10}" text-anchor="middle">c${d.cycle}</text>`;
+    }
+  });
+
+  // Lines
+  const sanyPoints = data.map(d => `${xScale(d.cycle)},${yScale(d.sany_rate)}`).join(' ');
+  const tlcPoints = data.map(d => `${xScale(d.cycle)},${yScale(d.tlc_rate)}`).join(' ');
+
+  html += `<polyline points="${sanyPoints}" fill="none" stroke="#6c8cff" stroke-width="2" opacity="0.8"/>`;
+  html += `<polyline points="${tlcPoints}" fill="none" stroke="#4ecdc4" stroke-width="2" opacity="0.8"/>`;
+
+  // Dots on last point
+  const last = data[data.length - 1];
+  html += `<circle cx="${xScale(last.cycle)}" cy="${yScale(last.sany_rate)}" r="4" fill="#6c8cff"/>`;
+  html += `<circle cx="${xScale(last.cycle)}" cy="${yScale(last.tlc_rate)}" r="4" fill="#4ecdc4"/>`;
+
+  // Legend
+  html += `<rect x="${W-pad.right+10}" y="${pad.top}" width="10" height="10" fill="#6c8cff" rx="2"/>`;
+  html += `<text x="${W-pad.right+24}" y="${pad.top+9}" font-size="11">SANY</text>`;
+  html += `<rect x="${W-pad.right+10}" y="${pad.top+20}" width="10" height="10" fill="#4ecdc4" rx="2"/>`;
+  html += `<text x="${W-pad.right+24}" y="${pad.top+29}" font-size="11">TLC</text>`;
+
+  // Axis labels
+  html += `<text x="${W/2}" y="${H-0}" text-anchor="middle" font-size="12" fill="var(--text-dim)">RL Training Cycle</text>`;
+
+  svg.innerHTML = html;
+}
+
+function renderComparison() {
+  const container = document.getElementById('comparison-chart');
+  const baseline = DATA.benchmark_latest.baseline || [];
+  const latest = DATA.benchmark_latest.latest_sft || [];
+
+  if (!baseline.length && !latest.length) {
+    container.innerHTML = '<p style="color:var(--text-dim)">No comparison data available.</p>';
+    return;
+  }
+
+  // Merge by benchmark_id
+  const allIds = [...new Set([...baseline.map(b => b.benchmark_id), ...latest.map(b => b.benchmark_id)])].sort();
+
+  const baseMap = Object.fromEntries(baseline.map(b => [b.benchmark_id, b]));
+  const latestMap = Object.fromEntries(latest.map(b => [b.benchmark_id, b]));
+
+  container.innerHTML = `<div style="font-size:0.8rem;margin-bottom:12px;color:var(--text-dim)">
+    <span style="color:#f05050">&#9632;</span> Baseline (gpt-oss:20b)
+    <span style="margin-left:12px;color:#4ecf73">&#9632;</span> Latest SFT (chattla:20b)
+  </div>` +
+  '<div style="max-height:400px;overflow-y:auto">' +
+  allIds.map(id => {
+    const b = baseMap[id], l = latestMap[id];
+    const name = (l || b).name;
+    return `<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;font-size:0.8rem">
+      <span style="width:130px;flex-shrink:0;text-align:right;color:var(--text-dim)">${name}</span>
+      <div style="flex:1;display:flex;gap:4px;align-items:center">
+        <div style="flex:1;height:16px;background:var(--surface2);border-radius:3px;display:flex;overflow:hidden">
+          ${b ? `<div style="width:${b.structural_score*100}%;background:#f05050;opacity:0.6" title="Baseline: ${(b.structural_score*100).toFixed(0)}%"></div>` : ''}
+        </div>
+        <div style="flex:1;height:16px;background:var(--surface2);border-radius:3px;display:flex;overflow:hidden">
+          ${l ? `<div style="width:${l.structural_score*100}%;background:${l.tlc_pass ? '#4ecf73' : l.sany_pass ? '#6c8cff' : '#f05050'};opacity:0.8" title="Latest: ${(l.structural_score*100).toFixed(0)}%"></div>` : ''}
+        </div>
+        <span style="width:65px;flex-shrink:0;font-size:0.75rem">${l ? (l.tlc_pass ? '<span class="pass">TLC ✓</span>' : l.sany_pass ? '<span style="color:var(--accent)">SANY ✓</span>' : '<span class="fail">fail</span>') : '-'}</span>
+      </div>
+    </div>`;
+  }).join('') + '</div>';
+}
+
+function renderLatestSummary() {
+  const container = document.getElementById('latest-summary');
+  const latest = DATA.benchmark_latest.latest_sft || [];
+  if (!latest.length) { container.innerHTML = '<p style="color:var(--text-dim)">No data.</p>'; return; }
+
+  const sany = latest.filter(r => r.sany_pass).length;
+  const tlc = latest.filter(r => r.tlc_pass).length;
+  const total = latest.length;
+  const avgStruct = (latest.reduce((s, r) => s + r.structural_score, 0) / total * 100).toFixed(1);
+
+  container.innerHTML = `
+    <div style="margin-bottom:16px">
+      <div style="font-size:0.85rem;color:var(--text-dim);margin-bottom:8px">Model: <strong style="color:var(--text)">${latest[0].model}</strong></div>
+    </div>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <span class="bar-label">SANY Pass</span>
+        <div class="bar-track"><div class="bar-fill" style="width:${sany/total*100}%;background:#6c8cff">${sany}/${total}</div></div>
+        <span class="bar-value">${(sany/total*100).toFixed(0)}%</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">TLC Pass</span>
+        <div class="bar-track"><div class="bar-fill" style="width:${tlc/total*100}%;background:#4ecdc4">${tlc}/${total}</div></div>
+        <span class="bar-value">${(tlc/total*100).toFixed(0)}%</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Structural</span>
+        <div class="bar-track"><div class="bar-fill" style="width:${avgStruct}%;background:#f0c040">${avgStruct}%</div></div>
+        <span class="bar-value">${avgStruct}%</span>
+      </div>
+    </div>
+    <div style="margin-top:20px">
+      <div style="font-size:0.85rem;color:var(--text-dim);margin-bottom:8px">Per-Benchmark Tiers</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px">
+        ${latest.map(r => `<span class="tier ${r.tlc_tier}" title="${r.name}">${r.benchmark_id.replace('BM0','')}</span>`).join('')}
+      </div>
+    </div>`;
+}
+
+// --- Specifications ---
+function renderSpecifications() {
+  const render = () => {
+    const q = document.getElementById('spec-search').value.toLowerCase();
+    let items = DATA.validated_specs;
+    if (q) items = items.filter(s => s.module_name.toLowerCase().includes(q) || s.source.toLowerCase().includes(q) || s.description.toLowerCase().includes(q));
+    document.getElementById('spec-count').textContent = `${items.length} specifications`;
+    document.getElementById('spec-list').innerHTML = items.map((s, i) =>
+      `<div class="spec-card">
+        <div class="spec-card-header" onclick="toggleSpec(this)">
+          <span class="toggle">&#9654;</span>
+          <span class="name">${escHtml(s.module_name)}</span>
+          <span class="tier gold" style="font-size:0.7rem">validated</span>
+          <span class="source">${escHtml(s.source)}</span>
+        </div>
+        <div class="spec-card-body">
+          ${s.description ? `<div class="spec-desc">${escHtml(s.description)}</div>` : ''}
+          ${s.license ? `<div style="font-size:0.8rem;color:var(--text-dim);margin-bottom:8px">License: ${escHtml(s.license)}</div>` : ''}
+          <div class="code-viewer">${highlightTLA(s.tla_content)}</div>
+          ${s.cfg_content ? `<div style="margin-top:12px"><div style="font-size:0.8rem;color:var(--text-dim);margin-bottom:4px">TLC Configuration:</div><div class="code-viewer" style="max-height:150px">${escHtml(s.cfg_content)}</div></div>` : ''}
+        </div>
+      </div>`
+    ).join('');
+  };
+  render();
+  document.getElementById('spec-search').oninput = render;
+}
+
+function toggleSpec(el) {
+  const body = el.nextElementSibling;
+  const toggle = el.querySelector('.toggle');
+  body.classList.toggle('open');
+  toggle.classList.toggle('open');
+}
+
+// --- Modules ---
+let modulePage = 0;
+const MODULE_PER_PAGE = 40;
+
+function renderModules() {
+  const render = () => {
+    const q = document.getElementById('module-search').value.toLowerCase();
+    let items = DATA.modules;
+    if (q) items = items.filter(m => m.module_name.toLowerCase().includes(q) || m.algorithm.toLowerCase().includes(q) || m.narrative.toLowerCase().includes(q));
+    document.getElementById('module-count').textContent = `${items.length} modules`;
+
+    const page = items.slice(modulePage * MODULE_PER_PAGE, (modulePage + 1) * MODULE_PER_PAGE);
+    document.getElementById('module-table').innerHTML = page.map(m =>
+      `<tr>
+        <td><strong>${escHtml(m.module_name)}</strong></td>
+        <td>
+          ${m.algorithm ? `<div style="color:var(--accent);font-size:0.8rem;margin-bottom:2px">${escHtml(m.algorithm)}</div>` : ''}
+          <div style="color:var(--text-dim);font-size:0.8rem;max-width:400px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${escAttr(m.narrative)}">${escHtml(m.narrative.substring(0, 150))}</div>
+        </td>
+        <td style="font-size:0.8rem">${m.variables.slice(0,5).map(v => `<code style="background:var(--surface2);padding:1px 5px;border-radius:3px;font-size:0.7rem">${escHtml(v)}</code>`).join(' ')}${m.variables.length > 5 ? ' <span style="color:var(--text-dim)">+' + (m.variables.length - 5) + '</span>' : ''}</td>
+        <td style="font-size:0.8rem">${m.actions.slice(0,4).map(a => `<code style="background:var(--surface2);padding:1px 5px;border-radius:3px;font-size:0.7rem">${escHtml(a)}</code>`).join(' ')}${m.actions.length > 4 ? ' <span style="color:var(--text-dim)">+' + (m.actions.length - 4) + '</span>' : ''}</td>
+      </tr>`
+    ).join('');
+
+    const totalPages = Math.ceil(items.length / MODULE_PER_PAGE);
+    renderPagination('module-pagination', totalPages, modulePage, p => { modulePage = p; render(); });
+  };
+  render();
+  document.getElementById('module-search').oninput = () => { modulePage = 0; render(); };
+}
+
+// --- Utilities ---
+function escHtml(s) { return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function escAttr(s) { return escHtml(s).replace(/"/g,'&quot;'); }
+
+function formatBytes(b) {
+  if (b < 1024) return b + ' B';
+  return (b / 1024).toFixed(1) + ' KB';
+}
+
+function highlightTLA(code) {
+  let s = escHtml(code);
+  // Comments
+  s = s.replace(/(\\\*.*?)$/gm, '<span class="cm">$1</span>');
+  s = s.replace(/(^\(\*[\s\S]*?\*\))/gm, '<span class="cm">$1</span>');
+  // Module header/footer
+  s = s.replace(/(----+\s*MODULE\s+)(\w+)(\s*----+)/g, '<span class="op">$1</span><span class="mod">$2</span><span class="op">$3</span>');
+  s = s.replace(/(====+)/g, '<span class="op">$1</span>');
+  // Keywords
+  const kws = ['EXTENDS','CONSTANTS?','VARIABLES?','ASSUME','AXIOM','THEOREM','LEMMA','PROPOSITION',
+    'LOCAL','INSTANCE','MODULE','LET','IN','IF','THEN','ELSE','CASE','OTHER',
+    'CHOOSE','EXCEPT','DOMAIN','ENABLED','UNCHANGED','SUBSET','UNION',
+    'SPECIFICATION','INVARIANTS?','PROPERTIES','INIT','NEXT','Spec','Init','Next',
+    'TRUE','FALSE','BOOLEAN','STRING','Nat','Int','Real','Seq','Append','Len','Head','Tail',
+    'WF_','SF_','TypeOK'];
+  const kwRe = new RegExp('\\b(' + kws.join('|') + ')\\b', 'g');
+  s = s.replace(kwRe, '<span class="kw">$1</span>');
+  // Operators
+  s = s.replace(/(\\(?:in|notin|cup|cap|subseteq|supseteq|forall|exists|land|lor|lnot|neg|equiv|implies|leadsto|prec|succ|sim|simeq|approx|cong|ll|gg|leq|geq|A|E|X|F|G|U|W))\b/g, '<span class="op">$1</span>');
+  s = s.replace(/(&lt;[=-]&gt;|[=-]&gt;|&lt;[=-]|\\\/|\/\\|#|\\@|~&gt;|\[\]|&lt;&gt;)/g, '<span class="op">$1</span>');
+  // Strings
+  s = s.replace(/(&quot;[^&]*?&quot;)/g, '<span class="str">$1</span>');
+  return s;
+}
+
+function renderPagination(containerId, totalPages, current, onPage) {
+  if (totalPages <= 1) { document.getElementById(containerId).innerHTML = ''; return; }
+  const el = document.getElementById(containerId);
+  let html = `<button class="page-btn" ${current === 0 ? 'disabled' : ''} onclick="void(0)">&laquo;</button>`;
+  const start = Math.max(0, current - 3);
+  const end = Math.min(totalPages, current + 4);
+  for (let i = start; i < end; i++) {
+    html += `<button class="page-btn ${i === current ? 'active' : ''}" data-page="${i}">${i + 1}</button>`;
+  }
+  html += `<button class="page-btn" ${current === totalPages - 1 ? 'disabled' : ''} data-page="next">&raquo;</button>`;
+  el.innerHTML = html;
+  el.onclick = (e) => {
+    const btn = e.target.closest('.page-btn');
+    if (!btn || btn.disabled) return;
+    let p = btn.dataset.page;
+    if (p === 'next') p = current + 1;
+    else if (p === undefined) p = current - 1;
+    else p = parseInt(p);
+    if (p >= 0 && p < totalPages) onPage(p);
+  };
+}
+
+// Initialize
+loadData();
+</script>
+</body>
+</html>
