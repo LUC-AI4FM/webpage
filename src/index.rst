@@ -178,13 +178,14 @@ Meet the Team
    pages/*
 
 .. toctree::
-   :glob:
    :hidden:
    :maxdepth: 2
    :caption: Research Papers
 
    All Papers <papers/index>
-   papers/*
+   papers/llm-tla-evaluation
+   papers/gcasr-2025-tla-llm
+   papers/tla-for-all
 
 .. toctree::
    :glob:
