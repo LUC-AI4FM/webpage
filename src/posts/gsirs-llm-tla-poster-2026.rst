@@ -1,21 +1,28 @@
 :blogpost: true
 :date: April 11, 2026
 :category: Research Update
-:tags: Formal Methods, TLA+, LLMs, figshare
+:tags: Formal Methods, TLA+, LLMs, GSIRS
 :nocomments:
 
-Brian Ortiz Presents LLM + TLA+ Poster at Graduate School Interdisciplinary Research Symposium
-==============================================================================================
+Brian Ortiz Presents Poster at Graduate School Interdisciplinary Research Symposium 2026
+=========================================================================================
 
 Brian Ortiz presented a poster at the Graduate School Interdisciplinary Research Symposium
-on April 11, 2026, showcasing the group's systematic evaluation of LLM-based TLA+
-specification synthesis from natural language. The poster is also available on figshare.
+(GSIRS 2026) on April 11, 2026, at Loyola University Chicago.
 
 The poster, co-authored with Arslan Bisharat, Mohammed Abuhamad, Konstantin Läufer,
-Eric Spencer, Khushboo Bhadauria, George K. Thiruvathukal, and TaiNing Wang, evaluates
-30 LLMs across eight families on a curated dataset of 205 TLA+ specifications. The study
-finds that LLMs achieve up to 26.6% syntactic correctness but only 8.6% semantic
-correctness, and that model size does not reliably predict performance on formal languages.
+Eric Spencer, Khushboo Bhadauria, George K. Thiruvathukal, and TaiNing Wang, presents
+the first systematic evaluation of LLM-based TLA+ specification synthesis from natural
+language. The study evaluates 30 LLMs across eight families on a curated dataset of 205
+TLA+ specifications, finding that LLMs achieve up to 26.6% syntactic correctness but
+only 8.6% semantic correctness. Model size does not reliably predict performance on
+formal languages.
+
+.. figure:: ../_static/images/gsirs-2026-brian-poster.png
+   :alt: Brian Ortiz at GSIRS 2026
+   :width: 100%
+
+   Brian Ortiz standing next to his poster at the Graduate School Interdisciplinary Research Symposium 2026, Loyola University Chicago.
 
 `View the poster on figshare <https://doi.org/10.6084/m9.figshare.31988706>`__
 

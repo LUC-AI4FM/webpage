@@ -188,10 +188,12 @@ Meet the Team
    papers/tla-for-all
 
 .. toctree::
-   :glob:
    :hidden:
    :maxdepth: 2
    :caption: Research Updates
 
    All Posts <posts/index>
-   posts/*
+   posts/gsirs-llm-tla-poster-2026
+   posts/llm-tla-evaluation-2025
+   posts/gcasr-2025-poster
+   posts/tla-for-all-running-model-checking-in-a-python-notebook
