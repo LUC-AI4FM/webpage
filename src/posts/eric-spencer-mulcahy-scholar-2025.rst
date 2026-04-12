@@ -1,5 +1,6 @@
 :blogpost: true
 :date: August 15, 2025
+:author: AB
 :category: Research Update
 :tags: Formal Methods, TLA+, LLMs, Awards
 :nocomments:
