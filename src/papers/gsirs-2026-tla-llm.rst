@@ -36,6 +36,12 @@ code-specialized models consistently underperform due to negative transfer from 
 language training.
 
 
+Based On
+--------
+
+This poster is based on the paper `Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+ Generation <llm-tla-evaluation/>`__, currently under submission.
+
+
 Citation
 --------
 

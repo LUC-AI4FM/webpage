@@ -24,6 +24,8 @@ formal languages.
 
    Brian Ortiz standing next to his poster at the Graduate School Interdisciplinary Research Symposium 2026, Loyola University Chicago.
 
+This poster is based on the paper `Can LLMs Write Correct TLA+ Specifications? Our New Evaluation Study <../posts/llm-tla-evaluation-2025/>`__, currently under submission.
+
 `View the poster on figshare <https://doi.org/10.6084/m9.figshare.31988706>`__
 
 `Read the full paper details <../papers/llm-tla-evaluation/>`__
