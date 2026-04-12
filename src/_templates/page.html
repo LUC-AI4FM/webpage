@@ -1,4 +1,4 @@
-{% extends "!page.html" %}
+{% extends "layout.html" %}
 
 {% block body %}
 {% if pagename in ablog %}
@@ -24,5 +24,5 @@
   {% endif %}
 </div>
 {% endif %}
-{{ super() }}
+{{ body }}
 {% endblock body %}
