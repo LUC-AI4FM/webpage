@@ -208,6 +208,10 @@ Students
 
             *Undergraduate Researcher, Computer Science*
 
+            Mulcahy Scholar — supported by the Loyola University Chicago
+            College of Arts and Sciences Mulcahy Scholars Program under
+            the supervision of Prof. Konstantin Läufer.
+
             `Website <https://ericspencer.us>`__ |
             `Email <mailto:espencer2@luc.edu>`__
 
