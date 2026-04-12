@@ -4,11 +4,12 @@
 :tags: Formal Methods, TLA+, LLMs, figshare
 :nocomments:
 
-Brian Ortiz Publishes LLM + TLA+ Poster on figshare
-=====================================================
+Brian Ortiz Presents LLM + TLA+ Poster at Graduate School Interdisciplinary Research Symposium
+==============================================================================================
 
-Brian Ortiz has published a poster on figshare presenting the group's systematic
-evaluation of LLM-based TLA+ specification synthesis from natural language.
+Brian Ortiz presented a poster at the Graduate School Interdisciplinary Research Symposium
+on April 11, 2026, showcasing the group's systematic evaluation of LLM-based TLA+
+specification synthesis from natural language. The poster is also available on figshare.
 
 The poster, co-authored with Arslan Bisharat, Mohammed Abuhamad, Konstantin Läufer,
 Eric Spencer, Khushboo Bhadauria, George K. Thiruvathukal, and TaiNing Wang, evaluates
