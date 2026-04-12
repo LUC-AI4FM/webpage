@@ -1,28 +1,27 @@
 {% extends "layout.html" %}
 
 {% block body %}
+{{ body }}
 {% if pagename in ablog %}
 {% set post = ablog[pagename] %}
-<div class="ablog-post-meta" style="margin-bottom: 1.5rem; color: var(--color-foreground-muted, #6c757d); font-size: 0.9rem;">
-  <span>{{ post.date.strftime("%B %d, %Y") }}</span>
-  {% if post.author %}
-    &nbsp;·&nbsp;
-    {% for author in post.author %}
-      {%- set ns = namespace(url=None) %}
-      {%- for key, info in ablog.blog_authors.items() %}
-        {%- if info[0] == author|string %}
-          {%- set ns.url = info[1] %}
-        {%- endif %}
-      {%- endfor %}
-      {% if ns.url %}
-        <a href="{{ ns.url }}" style="color: inherit;">{{ author }}</a>
-      {% else %}
-        <a href="{{ pathto(author.docname) }}" style="color: inherit;">{{ author }}</a>
-      {% endif %}
-      {% if not loop.last %}, {% endif %}
-    {% endfor %}
-  {% endif %}
+{% if post.author %}
+<div class="ablog-post-meta" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--color-background-border, #e0e0e0); color: var(--color-foreground-muted, #6c757d); font-size: 0.9rem;">
+  {% for author in post.author %}
+    {%- set ns = namespace(url=None) %}
+    {%- for key, info in ablog.blog_authors.items() %}
+      {%- if info[0] == author|string %}
+        {%- set ns.url = info[1] %}
+      {%- endif %}
+    {%- endfor %}
+    Authored by
+    {% if ns.url %}
+      <a href="{{ ns.url }}" style="color: inherit;">{{ author }}</a>
+    {% else %}
+      <a href="{{ pathto(author.docname) }}" style="color: inherit;">{{ author }}</a>
+    {% endif %}
+    {% if not loop.last %}, {% endif %}
+  {% endfor %}
 </div>
 {% endif %}
-{{ body }}
+{% endif %}
 {% endblock body %}
