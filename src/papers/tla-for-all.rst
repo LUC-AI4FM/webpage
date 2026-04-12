@@ -43,7 +43,6 @@ By integrating TLA+ into a Python notebook environment (Jupyter/JupyterLite):
 
 .. list-table::
    :header-rows: 1
-   :widths: 35 65
 
    * - Feature
      - Description

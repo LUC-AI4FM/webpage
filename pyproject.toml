@@ -21,6 +21,7 @@ dependencies = [
     "sphinx-togglebutton>=0.3.2",
     "sphinxcontrib-bibtex>=2.6.5",
     "sphinxcontrib-youtube>=1.4.1",
+    "sphinxext-opengraph>=0.9.1",
 ]
 
 [project.urls]

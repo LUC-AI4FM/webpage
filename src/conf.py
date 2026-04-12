@@ -30,6 +30,7 @@ extensions = [
     "sphinx_design",
     "sphinx_togglebutton",
     "sphinxcontrib.youtube",
+    "sphinxext.opengraph",
 ]
 
 templates_path = ["_templates"]
@@ -81,3 +82,14 @@ html_theme_options = {
     ],
 }
 html_title = project
+
+# OpenGraph / social preview tags
+ogp_site_url = "https://ai4fm.cs.luc.edu/"
+ogp_image = "https://ai4fm.cs.luc.edu/_static/images/favicon.png"
+ogp_description_length = 200
+ogp_type = "website"
+ogp_custom_meta_tags = [
+    '<meta name="description" content="AI4FM — AI for Formal Methods research group at Loyola University Chicago. Advancing TLA+, formal verification, and LLM evaluation for rigorous system design.">',
+    '<meta name="keywords" content="formal methods, TLA+, LLMs, model checking, Loyola University Chicago, AI, verification">',
+    '<meta name="twitter:card" content="summary">',
+]

@@ -29,7 +29,6 @@ Key Results
 
 .. list-table::
    :header-rows: 1
-   :widths: 50 50
 
    * - Metric
      - Best Result

@@ -71,6 +71,8 @@ Faculty
             served as department chair 2012-2018.
 
             `Website <https://laufer.cs.luc.edu/>`__ |
+            `Google Scholar <https://scholar.google.com/citations?user=Rs0f_nMAAAAJ&hl=en>`__ |
+            `ORCID <https://orcid.org/0000-0002-7548-0876>`__ |
             `GitHub <https://github.com/laufer>`__
 
    .. grid-item-card::
@@ -133,6 +135,8 @@ Faculty
             PhD from the National University of Singapore. Microsoft Research Asia Fellow (2019).
 
             `Website <https://taining.github.io/>`__ |
+            `Google Scholar <https://scholar.google.com/citations?user=LjWiPr8AAAAJ&hl=en>`__ |
+            `ORCID <https://orcid.org/0000-0001-8565-4019>`__ |
             `Email <mailto:twang12@luc.edu>`__
 
 
