@@ -49,7 +49,7 @@ External Collaborators
 
 We collaborate with researchers at other institutions on joint projects and publications.
 For collaboration inquiries, reach out through repository issue trackers or contact
-faculty directly via the `Loyola CS Department directory <https://www.luc.edu/cs/aboutus/people/>`__.
+our team directly via the :doc:`Team page <people>`.
 
 Community Standards
 --------------------
