@@ -12,8 +12,10 @@ Copyright (C) 2025 George K. Thiruvathukal.
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+import datetime
+
 project = "AI4FM | AI for Formal Methods"
-copyright = "2025, AI4FM Research Group"  # noqa: A001
+copyright = f"{datetime.date.today().year}, AI4FM Research Group"  # noqa: A001
 author = "AI4FM Research Group"
 release = "0.0.1"
 
