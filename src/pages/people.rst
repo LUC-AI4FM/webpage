@@ -14,11 +14,11 @@ Faculty
       :margin: 0
       :class-card: team-card
 
-      .. grid:: 2
+      .. grid:: 1 2 2 2
          :gutter: 0
 
          .. grid-item::
-            :columns: 3
+            :columns: 12 3 3 3
             :class: team-photo-col
 
             .. image:: ../_static/images/people/abuhamad.jpg
@@ -27,7 +27,7 @@ Faculty
                :width: 100%
 
          .. grid-item::
-            :columns: 9
+            :columns: 12 9 9 9
             :class: team-text-col
 
             **Mohammed Abuhamad**
@@ -46,11 +46,11 @@ Faculty
       :margin: 0
       :class-card: team-card
 
-      .. grid:: 2
+      .. grid:: 1 2 2 2
          :gutter: 0
 
          .. grid-item::
-            :columns: 3
+            :columns: 12 3 3 3
             :class: team-photo-col
 
             .. image:: ../_static/images/people/laufer.jpg
@@ -59,7 +59,7 @@ Faculty
                :width: 100%
 
          .. grid-item::
-            :columns: 9
+            :columns: 12 9 9 9
             :class: team-text-col
 
             **Konstantin Laufer**
@@ -77,11 +77,11 @@ Faculty
       :margin: 0
       :class-card: team-card
 
-      .. grid:: 2
+      .. grid:: 1 2 2 2
          :gutter: 0
 
          .. grid-item::
-            :columns: 3
+            :columns: 12 3 3 3
             :class: team-photo-col
 
             .. image:: ../_static/images/people/thiruvathukal.png
@@ -90,7 +90,7 @@ Faculty
                :width: 100%
 
          .. grid-item::
-            :columns: 9
+            :columns: 12 9 9 9
             :class: team-text-col
 
             **George K. Thiruvathukal**
@@ -109,11 +109,11 @@ Faculty
       :margin: 0
       :class-card: team-card
 
-      .. grid:: 2
+      .. grid:: 1 2 2 2
          :gutter: 0
 
          .. grid-item::
-            :columns: 3
+            :columns: 12 3 3 3
             :class: team-photo-col
 
             .. image:: ../_static/images/people/wang.jpg
@@ -122,7 +122,7 @@ Faculty
                :width: 100%
 
          .. grid-item::
-            :columns: 9
+            :columns: 12 9 9 9
             :class: team-text-col
 
             **TaiNing Wang**
@@ -145,7 +145,7 @@ Students
    .. dropdown:: PhD Students
       :open:
 
-      .. grid:: 3
+      .. grid:: 1 1 2 3
          :gutter: 3
 
          .. grid-item-card::
@@ -165,7 +165,7 @@ Students
    .. dropdown:: MS Students
       :open:
 
-      .. grid:: 3
+      .. grid:: 1 1 2 3
          :gutter: 3
 
          .. grid-item-card::
@@ -193,7 +193,7 @@ Students
    .. dropdown:: UG Students
       :open:
 
-      .. grid:: 3
+      .. grid:: 1 1 2 3
          :gutter: 3
 
          .. grid-item-card::

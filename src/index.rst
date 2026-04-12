@@ -42,7 +42,7 @@ Featured Research
 Research Areas
 --------------
 
-.. grid:: 2
+.. grid:: 1 1 2 2
    :gutter: 2
 
    .. grid-item-card::
@@ -82,7 +82,7 @@ Research Areas
 Meet the Team
 -------------
 
-.. grid:: 4
+.. grid:: 1 2 2 4
    :gutter: 2
 
    .. grid-item-card::

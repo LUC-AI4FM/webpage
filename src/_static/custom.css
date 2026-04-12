@@ -46,8 +46,51 @@ img.profile-photo {
     flex-shrink: 0;
 }
 
+/* On small screens, let faculty photo be full-width and natural height */
+@media (max-width: 575px) {
+    .team-photo-col {
+        height: 200px;
+    }
+
+    .team-photo-col img {
+        height: 200px;
+    }
+}
+
 .team-text-col {
     padding: 1rem 1.25rem !important;
+}
+
+/* Responsive figures — never overflow their container */
+figure, .figure {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+figure img, .figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive tables */
+table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+/* Prevent code blocks from overflowing on mobile */
+pre {
+    overflow-x: auto;
+    white-space: pre;
+}
+
+/* Responsive homepage card image heights */
+@media (max-width: 575px) {
+    .sd-card .sd-card-img-top {
+        height: 160px;
+    }
 }
 
 /* Consistent card background across all sections including dropdowns */
