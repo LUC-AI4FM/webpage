@@ -36,16 +36,6 @@ code-specialized models consistently underperform due to negative transfer from 
 language training.
 
 
-Poster
-------
-
-.. figure:: ../_static/images/gsirs-2026-brian-poster.png
-   :alt: Brian Ortiz at GSIRS 2026
-   :width: 100%
-
-   Brian Ortiz standing next to his poster at the Graduate School Interdisciplinary Research Symposium 2026, Loyola University Chicago.
-
-
 Citation
 --------
 
