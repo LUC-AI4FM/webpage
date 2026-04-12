@@ -12,7 +12,7 @@ semantically correct TLA+ specifications from natural language. We evaluated 30 
 across eight families on 205 TLA+ specifications. Best semantic correctness achieved
 was only 8.6%, and model size did not predict quality.
 
-`Read the full paper details <../papers/llm-tla-evaluation/>`__
+`Read the full paper details <../../papers/llm-tla-evaluation/>`__
 
 .. note::
    This paper is currently under submission.
