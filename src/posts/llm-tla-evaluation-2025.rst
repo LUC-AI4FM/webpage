@@ -1,5 +1,6 @@
 :blogpost: true
 :date: March 29, 2026
+:author: AB
 :category: Research Update
 :tags: Formal Methods, TLA+, LLMs
 :nocomments:

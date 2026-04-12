@@ -1,5 +1,6 @@
 :blogpost: true
 :date: April 11, 2026
+:author: AB
 :category: Research Update
 :tags: Formal Methods, TLA+, LLMs, GSIRS
 :nocomments:
