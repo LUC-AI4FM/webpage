@@ -26,4 +26,4 @@ formal languages.
 
 `View the poster on figshare <https://doi.org/10.6084/m9.figshare.31988706>`__
 
-`Read the full paper details <../papers/llm-tla-evaluation.html>`__
+`Read the full paper details <../papers/llm-tla-evaluation/>`__

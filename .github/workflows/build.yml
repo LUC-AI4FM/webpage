@@ -45,7 +45,7 @@ jobs:
 
       - name: Build the site
         run: |
-          ./.venv/bin/sphinx-build --write-all src build
+          ./.venv/bin/sphinx-build -b dirhtml --write-all src build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

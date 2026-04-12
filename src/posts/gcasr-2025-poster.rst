@@ -22,4 +22,4 @@ TLC model checker.
 
    Brian Ortiz standing with Konstantin Läufer next to their poster at GCASR 2025, Loyola University Chicago.
 
-`Read the full paper details <../papers/gcasr-2025-tla-llm.html>`__
+`Read the full paper details <../papers/gcasr-2025-tla-llm/>`__

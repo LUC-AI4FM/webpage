@@ -28,12 +28,12 @@ Featured Research
       Results show model size does not predict quality and code-specialized models
       consistently underperform on formal languages.
 
-      .. button-link:: papers/llm-tla-evaluation.html
+      .. button-link:: papers/llm-tla-evaluation/
          :color: primary
 
          Read More
 
-      .. button-link:: posts/llm-tla-evaluation-2025.html
+      .. button-link:: posts/llm-tla-evaluation-2025/
          :color: secondary
 
          Research Update
@@ -147,7 +147,7 @@ Meet the Team
 
       :octicon:`file;1em` **Research Papers**
 
-      .. button-link:: papers/index.html
+      .. button-link:: papers/
          :color: primary
          :expand:
 

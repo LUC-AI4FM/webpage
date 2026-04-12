@@ -22,7 +22,7 @@ Research outputs from the AI4FM group at Loyola University Chicago.
             SANY parser and TLC model checker. LLMs achieve only 8.6% semantic correctness.
             Model size does not predict quality on formal languages.
 
-            .. button-link:: llm-tla-evaluation.html
+            .. button-link:: llm-tla-evaluation/
                :color: primary
 
                Full Details
@@ -59,7 +59,7 @@ Research outputs from the AI4FM group at Loyola University Chicago.
             Loyola University Chicago. Presents a pipeline for automating TLA+ model synthesis
             from natural language using LLMs, validated with SANY and TLC.
 
-            .. button-link:: gcasr-2025-tla-llm.html
+            .. button-link:: gcasr-2025-tla-llm/
                :color: primary
 
                Full Details
@@ -80,7 +80,7 @@ Research outputs from the AI4FM group at Loyola University Chicago.
             verification accessible without specialized tooling. Supports literate modeling,
             reproducibility, and barrier-free access for teaching and research.
 
-            .. button-link:: tla-for-all.html
+            .. button-link:: tla-for-all/
                :color: primary
 
                Full Details
