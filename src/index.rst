@@ -197,4 +197,5 @@ Meet the Team
    posts/gsirs-llm-tla-poster-2026
    posts/llm-tla-evaluation-2025
    posts/gcasr-2025-poster
+   posts/eric-spencer-mulcahy-scholar-2025
    posts/tla-for-all-running-model-checking-in-a-python-notebook
