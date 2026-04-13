@@ -15,6 +15,9 @@ jobs:
           fetch-depth: 0
 
       - name: Push mirror
+        env:
+          MIRROR_PAT: ${{ secrets.MIRROR_PAT }}
         run: |
-          git remote add mirror https://arslanbisharat:${{ secrets.MIRROR_PAT }}@github.com/LUC-AI4FM/webpage.git
-          git push mirror main --force 2>&1 || (echo "Push failed with exit $?" && git remote -v && exit 1)
+          git config --global credential.helper ""
+          git remote add mirror https://arslanbisharat:${MIRROR_PAT}@github.com/LUC-AI4FM/webpage.git
+          git push mirror main --force
