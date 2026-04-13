@@ -18,6 +18,7 @@ jobs:
         env:
           MIRROR_PAT: ${{ secrets.MIRROR_PAT }}
         run: |
+          git config --unset-all "http.https://github.com/.extraheader" || true
           git config --global credential.helper ""
           git remote add mirror https://arslanbisharat:${MIRROR_PAT}@github.com/LUC-AI4FM/webpage.git
           git push mirror main --force
