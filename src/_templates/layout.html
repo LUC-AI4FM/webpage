@@ -1,0 +1,14 @@
+{% extends "!layout.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% if pagename == 'tla-bench' %}
+  <link rel="stylesheet" href="{{ pathto('_static/css/tla-bench.css', 1) }}">
+  <script defer src="{{ pathto('_static/js/tla-bench.js', 1) }}"></script>
+  {% endif %}
+{% endblock %}
+
+{% block body_tag %}
+  <body{% if pagename == 'tla-bench' %} class="tla-bench-page" data-tla-bench-data="{{ pathto('_static/data/tla-bench-results.json', 1) }}"{% endif %} data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="{{ default_mode }}">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">{{ _("Skip to main content") }}</a></div>
+{% endblock %}
