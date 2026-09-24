@@ -636,3 +636,21 @@ html body.tla-bench-page {
     min-width: 0;
   }
 }
+
+@media (max-width: 620px) {
+  html body.tla-bench-page {
+    overflow-x: hidden;
+  }
+
+  .tla-bench-page .bd-container__inner.bd-page-width,
+  .tla-bench-page .bd-main,
+  .tla-bench-page .bd-main .bd-content,
+  .tla-bench-page .bd-main .bd-content .bd-article-container,
+  .tla-bench-page .bd-main .bd-content .bd-article-container .bd-article {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
